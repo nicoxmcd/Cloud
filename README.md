@@ -1,4 +1,12 @@
-# AWS Cloud Computing
+# Cloud Computing with AWS
+## Interacting with AWS
+Logically manage infrastructure through AWS Application Programming Interface (AWS API) to create, delete, or change any AWS resource. Here are some ways we interact with AWS:
+- AWS Management Console (we-based)
+- AWS Command Line Interface (AWS CLI) ([AWS CloudShell](https://aws.amazon.com/cloudshell/?pg=cloudessentials))
+- IDE and IDE Toolkits
+- AWS Software Development Kits (SDKs)
+
+## Cloud Computing
 > "Cloud computing is the on-demand delivery of IT resources over the Internet with pay-as-you-go pricing. Instead of buying, owning, and maintaining physical data centers and servers, you can access technology services, such as computing power, storage, and databases, on an as-needed basis from a cloud provider like Amazon Web Services (AWS)."
 
 There's a variety of use cases for cloud computing: data backup, databases, disaster recovery, email, virtual desktops, software development and testing, big data analytics, and customer-facing web-applications.
@@ -32,7 +40,7 @@ IT resources managed by a cloud provider (AWS) delivered on demand over the inte
 
 All required hardware, operating systems, and other infrastructure layers are stored and managed in highly secure AWS data centers around the world. Anyone can build and deploy software without heavy upfront IT infrastructure investments. 
 
-## Examples
+## Examples of Cloud Services Offered by AWS
 **Resizable Compute Capacity**
 Access and configure compute cappacity as a fully managed cloud service. AWS provides hundreds of cloud instance types with the latest processors, operating systems, and purchase models to best match needs.
 
