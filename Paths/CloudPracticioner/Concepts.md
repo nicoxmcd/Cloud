@@ -45,7 +45,7 @@ Cloud services are available from any machine connected on the internet.
 - Scale up or down instantly
 - Benefit from economy of scale (cheaper)
 
-## Well-Architected Framework (Best Practices)
+### Well-Architected Framework (Best Practices)
 How to build the most secure, stable, durable, efficient, and high-performing IT infrastructure possible:
 1. Avoid Unnecessary Costs
 - Use only what you need, turn off resources we don't need
@@ -71,7 +71,7 @@ How to build the most secure, stable, durable, efficient, and high-performing IT
 - Antipicate failure
 - Update processes, post-mortems and develop procedures
 
-## AWS Cloud Adoption Framework (CAF)
+### AWS Cloud Adoption Framework (CAF)
 Ways for a company to start using AWS
 1. Starting from the beginning
 2. Migrating to AWS, adopting to the cloud (AWS CAF)
@@ -178,8 +178,8 @@ There is the transformation journey as well, these have four phases
 3. Launch 
 4. Scale
 
-# Introduction to AWS
-## A Brief History of AWS
+## Introduction to AWS
+### A Brief History of AWS
 - Amazon.com Web Service launched in 2002
 - Planned to be Merchant.com, but they become a service company
 - They have a majority market share, but others are quickly gaining
@@ -187,21 +187,21 @@ There is the transformation journey as well, these have four phases
 - 1 million active customers
 - 10% of amazon revenue came from AWS
 
-## What is AWS?
+### What is AWS?
 - Provides IT infrastructure services to organizations as web services
 - Resources are accessed using the internet
 - Utilizes the pay-as-you-go model
 - There are 24 service groups offered
 - Cloud computing service provider that offers flexibility, reliability, and affordability
 
-## Big companies using AWS
+### Big companies using AWS
 - Airbnb
 - General Electric
 - Netflix
 - Atlassian
 
-# Diving into AWS
-## Popular services offered by AWS
+## Diving into AWS
+### Popular services offered by AWS
 **Computer Services**
 - Provide virtual server hosting, container management, and serverless computing
 - Organizations can "rent" server compute space and capacities for cheap from AWS
