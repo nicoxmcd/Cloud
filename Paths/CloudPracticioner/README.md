@@ -21,5 +21,8 @@ These pages cover AWS concepts, security and compliance, core AWS services, and 
 - Identify components and resources for security
 
 ## Cloud Technology and Services
+- Compute, Storage, Database, Networking, Analytics, ML, Security, Identity & Compliance, and Content Delivery Services
+- Define the AWS global infrastructure and methods of deploying and operating in the AWS Cloud
+- Identify compute, database, network, storage, AI/ML, and analytics services and "services from other in-scope AWS service categories"
 
 ## Bill, Pricing, and Support

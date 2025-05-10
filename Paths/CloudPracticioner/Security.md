@@ -232,3 +232,9 @@ On-demand self-service portal to download AWS security and compliance documents 
 - AWS CloudTrail
 - AWS Audit Manager
 - AWS Config
+
+**AWS Security Information**
+- AWS Knowledge Center
+- AWS Security Center
+- AWS Security Blog
+- AWS Marketplace
