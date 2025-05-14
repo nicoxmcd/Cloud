@@ -317,18 +317,166 @@ Hosting, managing, patching our own databse on our virtual server or on AWS.
 - Spinning up an Amazon EC2 instance to host your databse gives you control but will require more active management
 
 ## Network Services
-### Amazon VPC
-### Amazon CloudFront
-### AWS Global Accelerator
-### Amazon Route 53
+### Amazon Virtual Private Cloud (VPC)
+Creates a logically isolated section in the cloud to provision AWS resources. We define what goes in, goes out, and what lives inside.
+- Logically isolated section in the cloud to provision resources
+- Flexible and secure, allowing you to control almost every aspect of your virtual network
+- Scalability
+- Boasted advanced security features to manage traffic
+- VPC automatically provisioned at AWS account sign-up
 
-## Artificial Intelligence, Machine Learning, Analytics Services
+**Example**
+- VPC: home network
+- Modem: internet gateway
+- Router: route table
+- network firewall: network access control list
+- laptops/tablets: EC2 resources launched inside the VPC etc.
+
+### Amazon CloudFront
+Content delivery network (CDN) to deliver data, applications, APIs fast. It can integrate with many service like EC2 or Shield.
+- CloudFront is a global content delivery network (CDN)
+- Based on location of the user, origin of the website/application, location of the content delivery server
+- Integrates with many AWS services to provide optimal performance and security
+- Scalable
+- Automatically managed traffic load without intervention
+- No minimum commitment or fixed contract
+- Only pay for content delivered using the service
+- Makes loading websites/apps faster for end users by using *edge locations* to cache files and resources
+
+**Origin** like a farm
+- S3
+- EC2 
+- ELB
+- Etc.
+
+**Edge Location** like a truck to a grocery store for consumers
+- Data center
+- Caching of data
+- Downloads content for certain period of time
+
+**User** like a consumer retriving their goods nearby
+- Downloads content from closet edge location
+- Faster download than going to origin server
+
+### AWS Global Accelerator
+- Throws your web traffic on the superspeed AWS global network instead of public networks to substantially shorten the amount of time necessary for your customers to load your web applications
+- Kind of like a virtual toll road that allows your web traffic to bypass the traffic on local roads and highways
+- Utilizes AWS edge locations and the high-speed, congestion-free AWS global network for your web traffic
+- Directs web traffic over the AWS global network to endpoints in the nearest Region to the customer
+- Availbility and performance of data delivery can go up by 60%
+
+### Amazon Route 53
+- Purchase, set up domain names 
+- Highly scalable cloud domain name systems (DNS)
+- Reliably and cost effectively routes end users to your internet applications
+- Connects user requests to infrastructure running on AWS
+- Can also route users to infrastructure outside of AWS as DNS service
+- Integrates with other AWS services
+- Simple to set up, fast, secure, and cost-effective
+- You're charged only for what you use without any up-front fees or minimum usage commitments
+- Automatically scale to handle large query vvolumes
+- Domain registration
+- Domain Name system
+- Health check of web apps
+- Auto-naming for service discovery
+
+## Artificial Intelligence AI, Machine Learning ML, Analytics Services
 ### AI/ML Services
+**Amazon SageMaker**
+- fully managed machine learning (ML) service
+- helps you build, train, and deploy ML models for whatever use case you may have
+- Develop real-world applications: product recommendation features, robotics, voice-assisted devices
+
+**Amazon Lex**
+- AI service to build bots with sophisticated voice and text conversational AI
+- Integrate voice assistants and chatbots to provide self-service customer service to your users
+
+**Amazon Kendra**
+- Uses ML to help find answers faster with intelligent search
+- Helps customers and employees find information they need it by using natural language processing (NLP)
+
 ### Data Analytics Services
+**What is a Data Lake?**
+- Repo that allows you to store all of your structured and unstructured data
+- You can run analytics to provide data processing, real-time analytics, machine learning, and much more
+- AWS recommends using Amazon S3 as a data lake and using analytics services to clean, analyze, and use the data
+
+**Analytics Services**
+- Amazon Athena: analyzes data directly in Amazon S3 using standard SQL
+- AWS Glue: integrates data from over 70 diverse data sources and prepares the data for analytics by "cleaning it up" for further analysis
+- Amazon Kinesis: helps organizations collect, process, and analyze data in real time at any scale and derive insights from it in minutes
+- Amazon QuickSight: business intelligence service with machine learning integrations that help youo quickly build visualizations and perform ad hoc analysis on your data to obtain business insights
 
 ## Management Tools
 ### AWS CloudFormation
-### AWS CloudWatch
+- Tempaltes: recipes for resource deployment in AWS
+- Provision and deploy fully configured infrastructure
+- Free to use
+- Pay only for resources used in the templates (e.g. EC2, S3 etc.)
+- Provision multi-region multi-tier applications quickly with text files using JSON or YAML
+- Update or manage the templates (stacks) using AWS Management Console, command line, or SDK
+- Version control available
+- Removes human error from manual setups
+- Saves time
+
+**Infrastructure as Code (IaC)**
+Deploy IT infrastructure based on a text file that specifies resources and configurations for each service being deployed!
+
+### AWS CloudTrail
+- Monitoring and auditing of IT infrastructure for compliance, user activity/API usage tracking, and risk auditing
+- Log and monitor account acitivities and event history
+- Simplify compliance audits
+- Discover/troubleshoot security and operational issues
+- Provide visibility into user/resource activities
+- Automatically respond to security threats through workflows
+- Track actions taken through AWS management console, SDKs, and command line tools
+- Review logs using CloudTrails event history
+- Deliver reports to S3 buckets or CloudWatch logs and events
+- Free review of account acitivities for the past 90 days
+- Set up trail to deliver copy of management events in each regions to S3 (subjected to S3 storage fees)
+- Logging of data events has small fees
+- *Audit logs*
+
 ### Amazon CloudWatch
+- Monitoring and management system for AWS infrastructure
+- Natively integrated with over 70 AWS services
+- Gain system wide visibility into resource utilization, application performance, and operational health
+- Get notifications in real time on data, metrics and events
+- Set up CloudWatch alarms to automatically make changes using preconfigured triggers to solve common issues
+- *Monitors and reacts to events*
 
 ## Other Services
+**Applications Integration Services**
+**Business Application Services**
+- Amazon Connect (Help centers)
+- Amazon Simple Email Service (Amazon SES) (managed email service)
+**Customer Engagement Services**
+- AWS Activate for startups (provides free tools, credits, solution templates)
+- AWS IQ (links you with AWS experts to complete projects faster)
+- AWS Managed Services (AMS) (provides infrastructure operations management and full life cycle services to support it)
+- AWS Support (general support services and support plans to align infrastructure with best practices)
+**Developer Tool Services**
+Tools and resources that allow IT to rapidly develop and test applications to AWS or on-premises environment
+- AWS AppConfig
+- AWS Cloud9
+- AWS CloudShell
+- AWS CodeArtifact
+- AWS CodeBuild
+- AWS CodeCommit
+- AWS CodeDeploy
+- AWS CodePipeline
+- AWS CodeStar
+- AWS X-Ray
+**End-user Computing Services**
+Allow employees to securely and remotely access desktops
+- Amazon AppStream 2.0
+- Amazon WorkSpaces
+- Amazon WorkSpaces Web
+**Front-end web and mobile service**
+Building, testing, monitoring web or mobile apps with end to end solutions
+- AWS Amplify
+- AWS AppSync
+**IoT services**
+Helps to connect to other devices to provide value to users
+- AWS IoT Core
+- AWS IoT Greengrass
