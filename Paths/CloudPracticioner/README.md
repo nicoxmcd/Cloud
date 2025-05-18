@@ -26,3 +26,9 @@ These pages cover AWS concepts, security and compliance, core AWS services, and 
 - Identify compute, database, network, storage, AI/ML, and analytics services and "services from other in-scope AWS service categories"
 
 ## Bill, Pricing, and Support
+- View and analyze your AWS cloud costs and usage
+- Forecast how much you're likely to spend in upcoming month
+- Get recommendations for what reserved instances to purphase to minimize costs
+- Compare AWS pricing models
+- Understand resources for billing, budget, and cost management
+- Identify AWS technical resources and support options
