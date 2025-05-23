@@ -1,6 +1,5 @@
 # Concepts of Cloud Computing
 ## Introduction to Cloud Computing
-
 ### Defining the Cloud
 We can use it to pass information, store data, and more. The internet itself is made up of copper wires and global network of billions of devices.
 
@@ -10,27 +9,28 @@ Cloud computing is an on-demand, pay-as-you-go delivery of compute, database sto
 
 ### Traditional Procurement Process
 **Servers**
-- Searching for a server that meets specific needs
-- Get a quote from the manufacturer
-- Send the quote for approval from finance
-- Immediately pay and then order the server
-- However, if it didn't meet your needs, the process repeats
+1. Searching for a server that meets specific needs
+2. Get a quote from the manufacturer
+3. Send the quote for approval from finance
+4. Immediately pay upfront, order the server, wait for delivery
+5. However, if it didn't meet your needs, the process repeats
 
 ### History
 **1950s Mainframe Computing**
 A central computer accessed by many user devices sending requests to the central computer.
 
 **1970s Virtual Machines**
-Multiple complete operating systems that "live" in a single piece of hardware. Hypervisors: software that links multiple hardware to use as one giant resource, an early iteration of cloud computing.
+Multiple complete operating systems that "live" in a single piece of hardware. 
+*Hypervisors*: software that links multiple hardware to use as one giant resource, an early iteration of cloud computing.
 
 **2020s The Cloud**
 We can connect to the countless servers provided by big service providers linked by hypervisors. There's unlimited access and limitless potential.
 
 ## Concepts
-Cloud services are available from any machine connected on the internet. 
+Cloud services are available from any internet connected machine. 
 
 **Main Advantages**
-- Trade capital expense for variable expense
+- Trade capital expense for variable expenses
 - Benefit from massive economies of scale
 - Stop guessing capacity
 - Increase speed and agility
@@ -38,56 +38,65 @@ Cloud services are available from any machine connected on the internet.
 - Go global in minutes
 
 **Other Advantages**
-- There's no need for physical servers or cabling
+- No need for physical servers or cabling
 - No need for server room setup or maintenance
 - No hardware replacement or procurement
 - Pay only when and what you consume
-- Scale up or down instantly
-- Benefit from economy of scale (cheaper)
+- Instantly scale up or down
+- Benefit from economy of scale
 
 ### Well-Architected Framework (Best Practices)
-How to build the most secure, stable, durable, efficient, and high-performing IT infrastructure possible:
-1. Avoid Unnecessary Costs
-- Use only what you need, turn off resources we don't need
-- Reserve resources in advance (discounts)
-- Continue to monitor for optimization, know what is driving costs
-2. Reliability
+How to build the most secure, stable, durable, efficient, and high-performing IT infrastructure as possible:
+
+**Avoid Unnecessary Costs**
+- Use only what you need, turn off resources you don't need
+- Reserve resources in advance to take advantages of discounts
+- Continue to monitor for optimization
+
+**Reliability**
 - Dynamically adjust computer resources
 - Automatically recover from service disruptions
 - Test disaster recovery settings
 - Incorporate redundancy
 - Have duplicate copies of resources
-3. Efficiency
+
+**Efficiency**
 - Use computing resources to adjust to system requirements
 - New changes should be able to go global in minutes
-4. Security
+
+**Security**
 - Information, systems, assests
 - Should be automated
 - Data should always be protected whether at rest or in transit
 - Manage access and enable traceability, everything should be well defined
-5. Operational Excellence
+
+**Operational Excellence**
 - Monitor everything
-- Document everything, refine operation procedures
+- Document everything
+- Refine operation procedures
 - Antipicate failure
 - Update processes, post-mortems and develop procedures
 
 ### AWS Cloud Adoption Framework (CAF)
-Ways for a company to start using AWS
+Ways for a company to start using AWS:
 1. Starting from the beginning
 2. Migrating to AWS, adopting to the cloud (AWS CAF)
-    - This takes a lot of collaboration with stakeholders and planning
-    - Provides recommendations for implementing, adopting, configuring, and maintaining effective workflows in the cloud
-    - Identify and iteration on solutions
+- This takes a lot of collaboration with stakeholders and planning
+- Provides recommendations for implementing, adopting, configuring, and maintaining effective workflows
+- Identify and iterate on solutions
 
-AWSCAF has a bunch of transformation domains allowing for subsequent domains to be transformed as well, AKA the AWS CAF Cloud Transformation Value Chain
-**Technological Transformation**
-- utilize cloud to migrate and modernize legacy infrastructure, applications, and data and analytics platforms
-**Process Transformation** 
-- digitize, automate, and optimize business operations
-**Organizational Transformation**
-- reimagine the operational model, or how your business and technology teams work together to create customer value and meet strategic goals
-**Product Transformations**
-- reimagine the business model by creating new value propositions and revenue models
+*AWS CAF Cloud Transformation Value Chain (Transformation Domains)*
+**Technological Transformation Domain**
+Utilize cloud to migrate and modernize legacy infrastructure, applications, and data and analytics platforms
+
+**Process Transformation Domain** 
+Digitize, automate, and optimize business operations
+
+**Organizational Transformation Domain**
+Reimagine the operational model, or how your business and technology teams work together to create customer value and meet strategic goals
+
+**Product Transformations Domain**
+Reimagine the business model by creating new value propositions and revenue models
 
 By following any of these transformation value chains, expected key business outcomes include:
 - Reduced business risk
@@ -95,41 +104,40 @@ By following any of these transformation value chains, expected key business out
 - Revenue growth
 - Increased operational efficiency
 
-It is enabled by foundational capabilities, such as efficiently distributing resources, people, technologies, etc.
+It is enabled by foundational capabilities like efficiently distributing resources, people, technologies, etc.
 
-Perspectives and Foundational Capabilities
+*Perspectives and Foundational Capabilities*
 **Business perspective**
-- ensure that cloud investments accelerate digital transformation and business outcomes
+- Ensure that cloud investments accelerate digital transformation and business outcomes
 - Stakeholders: CEO, COO, CFO, CIO, CTO
-- Examples: strategy and product management
+- Examples: Strategy and product management
 
 **People perspective**
 - Create a culture of continuous growth and learning where change is embraced 
 - Stakeholders: CIO, COO, CTO, Cloud Director, cross functional leaders
-- Examples: cloud fluency and organizational structure
+- Examples: Cloud fluency and organizational structure
 
 **Governance perspective**
 - Maximize organizational benefits while minimizing cloud-transformation-related risks
 - Stakeholders: chief transformation officer, CIO, CTO, CFO, chief data or risk officer
-- Examples: risk management, data governance
+- Examples: Risk management, data governance
 
 **Platform perspective**
 - Building enterprise-grade, scalable, hybrid cloud platforms, implement cloud-native solutions, and modernize existing infrastructure 
 - Stakeholders: CTO, technology leaders and architects
-- Examples: modern application development & platform engineering
+- Examples: Modern application development & platform engineering
 
 **Security perspective**
 - Achieve confidentiality, integrity, and availability needs of cloud data and workloads
 - Stakeholders: CISO, CCO, internal audit leaders, security architects & engineers
-- Examples: security governance and threat protection
+- Examples: Security governance and threat protection
 
 **Operations perspective**
 - Cloud services delievered meet business needs
 - Stakeholders: Infrastructure and operations leaders, site reliability engineers, and information tech service managers
-- Examples: obvservability and incident and problem management
+- Examples: Obvservability and incident and problem management
 
  For an effective cloud adoption experience, it's important to envision the target state and understand cloud readiness, implement incrementally. 
-
 **Envision Phase**
 Demonstrate how cloud adoption will help accelerate business outcomes and objectives
 
@@ -148,8 +156,9 @@ Expand pilots, scaling up to meet desired business needs while sustaining busine
 2. Benefit from mass economies of scale
 3. Stop guessing capacity
 4. Increase speed and agility
-5. Stop sepnding money running and maintaining data centers
+5. Stop spending money running and maintaining data centers
 6. Go global in minutes
+
 **AWS Well-architected framework**
 There are 6 pillars behind creating a well-architected framework in AWS
 1. Operational excellence
@@ -159,7 +168,7 @@ There are 6 pillars behind creating a well-architected framework in AWS
 5. Cost optimization
 6. Sustainability
 
-**AWS cloud adoption framework (AWS CAF)**
+**AWS Cloud Adoption Framework (AWS CAF)**
 There are different types of transformation domains:
 1. Technology
 2. Process
@@ -202,17 +211,18 @@ There is the transformation journey as well, these have four phases
 
 ## Diving into AWS
 ### Popular services offered by AWS
-**Computer Services**
+**Compute Services**
 - Provide virtual server hosting, container management, and serverless computing
 - Organizations can "rent" server compute space and capacities for cheap from AWS
-- No longer have to purchase physical servers or maintain data centers on-premises
+- No longer have to purchase physical servers or maintain data centers on-prem
 
 **Storage Service**
-- Provider storage for both in-use and archival files; S3 to use on the website or store large amounts of data
+- Provide storage for both in-use and archival files
 - Different costs associated with how often you need to access the files and how durable or available you want them to be
-- Storage type for almost every level of need with very granular costs to meet budget requirements
+- Storage type for almost every level of need with granular costs to meet budget requirements
 
 **Database Services**
 - Fully managed relational and NoSQL databases
 - Relational database service and highly scalable petabtye data warehouse service
-- Highly scalable and cost efficient: crunch data at a fraction of the cost of on-site database servers
+- Highly scalable and cost efficient
+- Crunch data at a fraction of the cost of on-site database servers
