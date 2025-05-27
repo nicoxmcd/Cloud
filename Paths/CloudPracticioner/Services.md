@@ -45,11 +45,11 @@ Where our IT infrastructure resides:
 - IT infrastructure lives both in the cloud and in on-prem data centers
 - Connects on-prem technology with cloud based resources
 - Might be in the process of migrating over to the cloud
-- Allows organizations to extend/scale infrastructure in to the cloud while maintaining access to on-premises resources
+- Allows organizations to extend/scale infrastructure in to the cloud while maintaining access to on-prem resources
 - Cloud deployment as a backup/disaster recovery solution
 **On-premises deployment**
 - Utilizes virtualization technologies and application management to increase efficiency 
-- A lot of the setup dos not provde many of the benefits of cloud computing becasue resources are all on-site
+- A lot of the setup dos not provide many of the benefits of cloud computing
 - Has very low latency (lag) because resources are on-site and don't require traveling through the internet
 - Provides dedicated resources, which may be an industry requirement
 - Necessary for organization requiring data privacy such as medical orgs
@@ -57,34 +57,33 @@ Where our IT infrastructure resides:
 ### AWS Global Infrastructure
 AWS has data centers all over the world.
 **Availability Zone (AZs)**
-- discrete data centers around the world, separated from each other by network, power source, and "a meaningful distance"
+- There are discrete data centers around the world, separated from each other by network, power source, and "a meaningful distance"
 - Each AZ being separated as such, means that they don't share a single point of failure in case of natural or man-made disasters
-- High availability: hosting resources in multiple AZs
-- Fault tolerance: ability to provide uninterrupted performance even during natural/human made disasters
-- Resiliency: capacity to recover from disasters quickly (similar to fault toleration, but even better) (redundancy)
+- High availability: Hosting resources in multiple AZs
+- Fault Tolerance: Ability to provide uninterrupted performance even during natural/human made disasters
+- Resiliency: Capacity to recover from disasters quickly (similar to fault toleration, but even better) (redundancy)
 
 **Regions**
-- Region: two or more AZs
+- Region: Two or more AZs
 - All AZs within a region are interconnected with high bandwidth, low latency networking
 - Different regions have different AWS cloud offerings (regions with more up to date service: us-east, us-west, tokyo, singapore, ireland, frankfurt)
 - Can host resources in multiple regions for many reasons
 - Generally choose the region closest to your physical location
 - Some regions may cost differently than others
 - Some may require you to host resources in different regions
-- Data is subject to laws of the nation in which they are collected is data soveriegnty, if we serve customers in different countries, observe that country's regulations
+- Data Soveriegnty: Data is subject to laws of the nation in which they are collected, if we serve customers in different countries, observe that country's regulations
 
 **AWS Local Zones**
 - Helps you run your latency-sensitive applciations by placing compute, storage, database, and other AWS resources close to large populations and business centers when there are no AWS regions close enough to your end users
 - Connected with high-bandwidth secure network connections to local AWS regions to access full range of in-region services provided in those regions
 
 **AWS Wavelength Zones**
-- provide ultra-low-latency user experience for application end users by embedding AWS compute and storage services within 5G networks
+- Provide ultra-low-latency user experience for application end users by embedding AWS compute and storage services within 5G networks
 - Provde mobile edge computing infrastructure to develop, deploy, and scale ultra low latency applications
-- 
 
 ## Compute Services
 ### Amazon Elastic Compute Cloud (EC2)
-Spinning up a fully customizable virtual server: an instance. These instances are configurable by CPU size, GB of RAM,  size and types of storage, and network speed. Only charging you for what you use, no up front costs and takes minutes to create.
+ An instance: Spinning up a fully customizable virtual server. These instances are configurable by CPU size, GB of RAM,  size and types of storage, and network speed. Only charging you for what you use, no up front costs and takes minutes to create.
 
 **EC2 Instance Types**
 - General Purpose: good for general-purpose workloads that utilize resources in equal proportions, provides a good balance of memory and computing resources, ideal for web servers or cold repos
@@ -105,7 +104,7 @@ Packaging code in a single project which are isolated from other code components
 **ECS**
 - Helps us run containers on the cloud
 - Fully managed container orchestration service to run highly secure, reliable, and scalable containers
-- Deploy, manage, and scale containerized applications quickly on-premises and in the cloud
+- Deploy, manage, and scale containerized applications quickly on-prem and in the cloud
 - Describe your application and the resources required, and ECS will launch, monitor, and scale your application
 
 **EKS**
@@ -118,7 +117,7 @@ Packaging code in a single project which are isolated from other code components
 - Retain full control over resource always
 - Free to use, pay for only the consumed resources
 - Autoscaling
-- Copmlete freedom to select AWS resources (instance type of EC2)
+- Complete freedom to select AWS resources (instance type of EC2)
 - Allows manual management of infrastructure
 - Provisions and operates infrastructure
 
@@ -181,7 +180,7 @@ Servers exist, but sometimes they are abstract and developers don't have to worr
 - S3 Glacier Flexible Retrieval: low-cost storage with low retrieval fees for archived or backend-up-data-with 1-5 minutes, 3-5 hour, or 12 hour retrieval times
 - S3 Glacier Deep Archive: lowest-cost option for long term achieves with 12- or 48 hour retrieval times
 - S3 One Zone-Infrequent Access (S3 One Zone-IA): low-cost storage for infrequently accessed objects with rapid retrieval that don't require multi-AZ redundancy
-- S3 on Outposts: object storage for on-premises for AWS Outpost environments
+- S3 on Outposts: object storage for on-prem for AWS Outpost environments
 
 ### Amazon Elastic Block Store (EBS)
 Add extra block storage to an EC2 instance instantly
@@ -197,7 +196,7 @@ Add extra block storage to an EC2 instance instantly
 - Like an external hard drive for these servers
 
 ### AWS Snow Family
-**AWS hybrid cloud service**
+**AWS Hybrid Cloud Service**
 - extends AWS infrastructure and services into the edge, where customers physically reside
 - These are hardware services (they physically ship these devices to you)
 
@@ -230,7 +229,7 @@ Connects on-prem storage with AWS Storage (S3 or EBS). It creates a gate from on
 **Volume Gateway**
 - Upload files in blocks like virtual hard drives
 - Asynchronously backed up as point-in-time snapshots and stored as EBS snapshots
-- Stored volume: complete copy on-premises; sends snapshots to AWS
+- Stored volume: complete copy on-prem; sends snapshots to AWS
 - Cached volume: keeps most recently accessed data on premises, complete copy on AWS
 
 **Tape Gateway**
@@ -250,9 +249,9 @@ Connects on-prem storage with AWS Storage (S3 or EBS). It creates a gate from on
 
 ## Database Services
 **AWS Database Solutions**
-- Relational databases: Amazon RDS, Amazon Aurora
-- NoSQL databases: Amazon DynamoDB
-- In-memory databses: Amazon MemoryDB for Redis, Amazon DynamoDB Accelerator (DAX), Amazon ElastiCache
+- Relational Databases: Amazon RDS, Amazon Aurora
+- NoSQL Databases: Amazon DynamoDB
+- In-memory Databases: Amazon MemoryDB for Redis, Amazon DynamoDB Accelerator (DAX), Amazon ElastiCache
 - Database migration tools: AWS Database Migration Service, AWS Schema Conversion Tool
 
 **Relational Databases**
@@ -264,7 +263,7 @@ Connects on-prem storage with AWS Storage (S3 or EBS). It creates a gate from on
 - Collection of managed services to set up and operate relational databases
 - highly scalable
 - Database engines choices supported: Amazon Aurora, Oracle, Microsoft SQL Server, MySQL, PostgreSQL, MariaDB
-- Can also deploy on-premises with Amazon RDS on AWS Outposts
+- Can also deploy on-prem with Amazon RDS on AWS Outposts
 
 *Amazon Aurora*
 - Fully managed (by AWS RDS) relational database engine
@@ -272,7 +271,7 @@ Connects on-prem storage with AWS Storage (S3 or EBS). It creates a gate from on
 - Can monitor performance through monitoring services
 - MySQL and PostgreSQL compatible
 - Autoscaling
-- Get the same security, availability, and reliability of commericial databases for faster and cheaper
+- Get the same security, availability, and reliability of commercial databases for faster and cheaper
 
 **AWS Database Migration Services**
 - AWS Data Migration Service (AWS DMS)
@@ -295,7 +294,7 @@ Connects on-prem storage with AWS Storage (S3 or EBS). It creates a gate from on
 - In-Memory Database System (IMDS)
 - Real Time Database (RTDB)
 - Databases that rely on internal memory or RAM for data storage
-- ideal for applicatiosn that require microsecond reponse times or have large spikes in traffic
+- Ideal for applications that require microsecond reponse times or have large spikes in traffic
 - Offers low latency, high throughput, and high scalability like banks, gaming apps
 - Examples: Amazon MemoryDB for Redis, Amazon DAX, Amazon ElastiCache
 
@@ -304,7 +303,7 @@ Connects on-prem storage with AWS Storage (S3 or EBS). It creates a gate from on
 - Fully managed, no servers to provision or manage
 - Petabyte scale data warehouse service
 - Faster and cheaper than other data warehouse providers
-- Data warehouse: stores extremely large amounts of data collected from a wide range of sources to analyze
+- Data Warehouse: stores extremely large amounts of data collected from a wide range of sources to analyze
 - Secure, quick to set up, and easy to scale
 
 ### Evaluate: Hosted or Managed Database?
@@ -332,8 +331,8 @@ Creates a logically isolated section in the cloud to provision AWS resources. We
 - laptops/tablets: EC2 resources launched inside the VPC etc.
 
 ### Amazon CloudFront
-Content delivery network (CDN) to deliver data, applications, APIs fast. It can integrate with many service like EC2 or Shield.
-- CloudFront is a global content delivery network (CDN)
+Content Delivery Network (CDN) to deliver data, applications, APIs fast. It can integrate with many service like EC2 or Shield.
+- CloudFront is a global CDN
 - Based on location of the user, origin of the website/application, location of the content delivery server
 - Integrates with many AWS services to provide optimal performance and security
 - Scalable
@@ -354,7 +353,7 @@ Content delivery network (CDN) to deliver data, applications, APIs fast. It can 
 - Downloads content for certain period of time
 
 **User** like a consumer retriving their goods nearby
-- Downloads content from closet edge location
+- Downloads content from closest edge location
 - Faster download than going to origin server
 
 ### AWS Global Accelerator
@@ -382,8 +381,8 @@ Content delivery network (CDN) to deliver data, applications, APIs fast. It can 
 ## Artificial Intelligence AI, Machine Learning ML, Analytics Services
 ### AI/ML Services
 **Amazon SageMaker**
-- fully managed machine learning (ML) service
-- helps you build, train, and deploy ML models for whatever use case you may have
+- Fully managed machine learning (ML) service
+- Helps you build, train, and deploy ML models for whatever use case you may have
 - Develop real-world applications: product recommendation features, robotics, voice-assisted devices
 
 **Amazon Lex**
@@ -401,14 +400,14 @@ Content delivery network (CDN) to deliver data, applications, APIs fast. It can 
 - AWS recommends using Amazon S3 as a data lake and using analytics services to clean, analyze, and use the data
 
 **Analytics Services**
-- Amazon Athena: analyzes data directly in Amazon S3 using standard SQL
-- AWS Glue: integrates data from over 70 diverse data sources and prepares the data for analytics by "cleaning it up" for further analysis
-- Amazon Kinesis: helps organizations collect, process, and analyze data in real time at any scale and derive insights from it in minutes
-- Amazon QuickSight: business intelligence service with machine learning integrations that help youo quickly build visualizations and perform ad hoc analysis on your data to obtain business insights
+- Amazon Athena: Analyzes data directly in Amazon S3 using standard SQL
+- AWS Glue: Integrates data from over 70 diverse data sources and prepares the data for analytics by "cleaning it up" for further analysis
+- Amazon Kinesis: Helps organizations collect, process, and analyze data in real time at any scale and derive insights from it in minutes
+- Amazon QuickSight: Business intelligence service with machine learning integrations that help you quickly build visualizations and perform ad hoc analysis on your data to obtain business insights
 
 ## Management Tools
 ### AWS CloudFormation
-- Tempaltes: recipes for resource deployment in AWS
+- Templates: recipes for resource deployment in AWS
 - Provision and deploy fully configured infrastructure
 - Free to use
 - Pay only for resources used in the templates (e.g. EC2, S3 etc.)
@@ -455,7 +454,7 @@ Deploy IT infrastructure based on a text file that specifies resources and confi
 - AWS Managed Services (AMS) (provides infrastructure operations management and full life cycle services to support it)
 - AWS Support (general support services and support plans to align infrastructure with best practices)
 **Developer Tool Services**
-Tools and resources that allow IT to rapidly develop and test applications to AWS or on-premises environment
+Tools and resources that allow IT to rapidly develop and test applications to AWS or on-prem environment
 - AWS AppConfig
 - AWS Cloud9
 - AWS CloudShell
