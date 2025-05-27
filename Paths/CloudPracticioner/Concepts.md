@@ -107,32 +107,32 @@ By following any of these transformation value chains, expected key business out
 It is enabled by foundational capabilities like efficiently distributing resources, people, technologies, etc.
 
 *Perspectives and Foundational Capabilities*
-**Business perspective**
+**Business Perspective**
 - Ensure that cloud investments accelerate digital transformation and business outcomes
 - Stakeholders: CEO, COO, CFO, CIO, CTO
 - Examples: Strategy and product management
 
-**People perspective**
+**People Perspective**
 - Create a culture of continuous growth and learning where change is embraced 
 - Stakeholders: CIO, COO, CTO, Cloud Director, cross functional leaders
 - Examples: Cloud fluency and organizational structure
 
-**Governance perspective**
+**Governance Perspective**
 - Maximize organizational benefits while minimizing cloud-transformation-related risks
 - Stakeholders: chief transformation officer, CIO, CTO, CFO, chief data or risk officer
 - Examples: Risk management, data governance
 
-**Platform perspective**
+**Platform Perspective**
 - Building enterprise-grade, scalable, hybrid cloud platforms, implement cloud-native solutions, and modernize existing infrastructure 
 - Stakeholders: CTO, technology leaders and architects
 - Examples: Modern application development & platform engineering
 
-**Security perspective**
+**Security Perspective**
 - Achieve confidentiality, integrity, and availability needs of cloud data and workloads
 - Stakeholders: CISO, CCO, internal audit leaders, security architects & engineers
 - Examples: Security governance and threat protection
 
-**Operations perspective**
+**Operations Perspective**
 - Cloud services delievered meet business needs
 - Stakeholders: Infrastructure and operations leaders, site reliability engineers, and information tech service managers
 - Examples: Obvservability and incident and problem management
@@ -151,7 +151,7 @@ Deliver pilot initiatives in production and demonstrate incremental business val
 Expand pilots, scaling up to meet desired business needs while sustaining business benefits
 
 ## Review: Cloud Computing Concepts
-**Advantages over legacy infrastructure**
+**Advantages Over Legacy Infrastructure**
 1. Trade fixed for variable expense
 2. Benefit from mass economies of scale
 3. Stop guessing capacity
@@ -159,7 +159,7 @@ Expand pilots, scaling up to meet desired business needs while sustaining busine
 5. Stop spending money running and maintaining data centers
 6. Go global in minutes
 
-**AWS Well-architected framework**
+**AWS Well-Architected Framework**
 There are 6 pillars behind creating a well-architected framework in AWS
 1. Operational excellence
 2. Security

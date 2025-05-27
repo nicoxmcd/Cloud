@@ -2,17 +2,16 @@
 ## Deploying and Operating Domain
 ### Interacting with the AWS Cloud
 There are a number of ways to deploy resources for AWS, each of these utilzie AWS APIs. We can use just one or a combination of these tools.
-1. AWS Management Console
-- Graphical interface that supports most AWS services
-- Web-portal-esque
+**AWS Management Console**
+- Web portal graphical interface that supports most AWS services
 - Can access billing statement, launch new services, check out health of web apps and so on
 - User friendly and easy to navigate
-2. AWS Command Line Interface (CLI)
+**AWS Command Line Interface (CLI)**
 - Access AWS servcies via the command line
 - Command line: access and change resources via text based command entry
 - Programming language agnostic
 - Allows us to create scripts to run on AWS
-3. AWS Software Development Kits (SDKs)
+**AWS Software Development Kits (SDKs)**
 - Incoporate connectivity and functionality of a wide range of AWS services into your code
 - Deploy AWS services and resources using a variety of popular programming languages (Java, C++, Ruby, PHP, etc.)
 - Use AWS resources in exisitng applications
@@ -23,28 +22,28 @@ There are a number of ways to deploy resources for AWS, each of these utilzie AW
 
 ### Connecting with the AWS Cloud
 How we can establish connectivity options to send data etc. Amazon provides us with a Virtual Private Cloud (VPC) to use for AWS resources.
-- Virtual Private Network (VPN)
-    - Creates an encrypted private network between my device and the resource I'm conencting to
-    - AWS VPN service
-- AWS Direct Connect
-    - Directly, privately, and securely connect local network and AWS
-    - "Shortest path" between local network and AWS, providing lower latency and reducing bandwidth costs
-    - Bypassing public internet
-- Public Internet
-    - The default connection method for most daily use of internet 
-    - Data transferred is not secured, private, or encrypted
-    - Utilize private and secure ways to access the AWS Cloud to keep resources secure
+**Virtual Private Network (VPN)**
+- Creates an encrypted private network between my device and the resource I'm conencting to
+- AWS VPN service
+**AWS Direct Connect**
+- Directly, privately, and securely connect local network and AWS
+- "Shortest path" between local network and AWS, providing lower latency and reducing bandwidth costs
+- Bypassing public internet
+**Public Internet**
+- The default connection method for most daily use of internet 
+- Data transferred is not secured, private, or encrypted
+- Utilize private and secure ways to access the AWS Cloud to keep resources secure
 
 ### Cloud Deployment Models
 Where our IT infrastructure resides:
-**Cloud deployment/cloud-native deployment**
+**Cloud Deployment/Cloud-Native Deployment**
 - All parts of IT infrastructure reside and run in the cloud
 - All applications/resources are migrated to or created in the cloud
 - Relies on the internet and cloud computing service providers for computational/IT requirements
 - Flexible and scalable in resources
 **Hybrid deployment**
-- IT infrastructure lives both in the cloud and in on-premises data centers
-- Connects on-premises technology with cloud based resources
+- IT infrastructure lives both in the cloud and in on-prem data centers
+- Connects on-prem technology with cloud based resources
 - Might be in the process of migrating over to the cloud
 - Allows organizations to extend/scale infrastructure in to the cloud while maintaining access to on-premises resources
 - Cloud deployment as a backup/disaster recovery solution

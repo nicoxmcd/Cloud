@@ -1,25 +1,23 @@
 # Billing, Pricing, and Support
-## Introduction
-
 ## Billing and Pricing
 ### AWS Billing Dashboard
-- Estimate and plan for your AWS costs
-- Simplify account with multiple AWS accounts through consolidated billing
+- Estimate and plan for your costs
+- Simplify bills with multiple AWS accounts through consolidated billing
 - Receive alerts for service usage thresholds
 - Visualize monthly chargeable costs and bills
-- Invoices generated after monthyl billing period or when subscriptions or one-time purchases are made
+- Access invoices generated after monthly billing period or when subscriptions or one-time purchases are made
 
-### Types of Charges for purchasing computing resources
+### Types of Charges
 There's the pay-as-you-go pricing model. Spinning up virtual servers instead of purchasing a physical server.
-Different services have different charging models.  Amazon EC2 charges per hour of use. There are three fundamental ways AWS charges:
+Different services have different charging models. Amazon EC2 charges per hour of use. There are three fundamental ways AWS charges:
 
 **Compute**
 - Pay as you go (on-demand instances)
 - Save when you commit (reserved instances) (Example: saving on a gym membership by commiting for the full year)
-- Save when you commit (Savings plans) (booking a certain amount of computing power)
-- Take advantage of unused AWS capacity (spot instances) (up to 90% off of on-demand pricing, but it would be a flexible schedule)
+- Save when you commit (savings plans) (booking a certain amount of computing power)
+- Take advantage of unused AWS capacity (spot instances) (up to 90% off of on-demand pricing, but it would be an unpredictable schedule)
 - Save by using your own licenses and utilizing dedicated hardware (EC2 dedicated hosts)
-- Run Amazon EC2 instances on dedicated hardware (dedicated instances) (provides each customer with dedicated hardware so a single piece of hardware would be isolated for that customer, could solve compliance requirements sometiems)
+- Run Amazon EC2 instances on dedicated hardware (dedicated instances) (provides each customer with dedicated hardware so a single piece of hardware would be isolated for that customer, could solve compliance requirements)
 - Reserve compute capacity in advance (capacity reservations)
 - Pay less by using more
 
@@ -27,30 +25,30 @@ Different services have different charging models.  Amazon EC2 charges per hour 
 Amazon S3 charges per GB of usage.
 
 **Data Transfer**
-Data going INTO AWS is usually free, but outbound data is scharged depending on which region the data starts from and leaves from. These charges vary from region to region and cross availability zones.
+Data going INTO AWS is usually free, but outbound data is charged depending on which region the data comes from and goes to. These charges vary from region to region and cross availability zones.
 
 ### AWS Free Tier
-Try many services for free for 12 months for most services. But as the expiration date of the free tier approaches, you'll be notified by AWS and you'll be responsible for manaually turning down or deleting the services you don't want to be charged for.
+Try many services for free for 12 months for most services. But as the expiration date of the free tier approaches, you'll be notified by AWS and you'll be responsible for manaually turning off or deleting the services you don't want to be charged for.
 **Always Free**
 These services as always free to use, but there are usage limits.
 
 **12 Months**
-Free for use, with usage limit, for 12 months after initial sign-up date: these limits might be use time, requests, storage, number of characters, number of actions per month.
+Free for use, with usage limit, for 12 months after initial sign-up date: these limits might be use-time, requests, storage, number of characters, number of actions per month.
 
 **Trials**
-Most are less than 12 months and have stricter limits, common limitations are use time, number of requests, use of space.
+Most are less than 12 months and have stricter limits, common limitations are use-time, number of requests, use of space.
 
 ## Billing, Budget, and Cost Management
-### AWS Budget and cost management resources
+### AWS Budget and Cost Management Resources
 **AWS Budgets**
 - Set up custom budgets to track your AWS resource costs and usage
 - Send alerts when you exceed thresholds (no surprise bills)
 - Respond with custom actions to prevent outages, insufficient resource use, and lack of coverage
-- You can opt to receive AWS budget reports daily, weekly, or monthly via email
+- Opt to receive budget reports daily, weekly, or monthly via email
 - Visualize costs before you spend
 
 **AWS Cost Explorer**
-- Analyze AWS resource usages after the fact and create usage forecast to project future AWS costs
+- Analyze resource usages and create usage forecast to project future costs
 - Create custom reports based on usage to analyze data at high or granular levels
 
 **AWS Cost and Usage Reports AWS CUR**
@@ -58,7 +56,7 @@ Most are less than 12 months and have stricter limits, common limitations are us
 - Identify ways to optimize monthly AWS usage bills
 - Provide metadata on AWS services, pricing, credits, fees, taxes, discounts, cost categories, reserved instances, and savings plans
 - Utilize AWS cost allocation tags on reports (AWS generated, or user generated) these tags conssit of a key and value
-- Integrate data with Amazon Athena, Amazon Redshift, or Amazon QuickSigt for deep analyses
+- Integrate data with Amazon Athena, Amazon Redshift, or Amazon QuickSight for deep analysis
 
 **AWS Billing Conductor**
 - Analyze your organization or customers' spending and bill for resource usage based on your defined rates
@@ -67,10 +65,10 @@ Most are less than 12 months and have stricter limits, common limitations are us
 **AWS Pricing Calculator**
 - Located at calculator.aws
 - Replaced the AWS total cost of ownership calculator
-- Takes estimated resource usage you input from current infrastructure and providkes estimated costs for running your workloads on AWS clouds
+- Takes estimated resource usage you input from current infrastructure and provides estimated costs for running your workloads on AWS clouds
 - Create a cost benefit analysis for potentially moving infrastructure onto AWS cloud
 
-### Consolidated billing
+### Consolidated Billing
 **Multiple AWS Accounts**
 Maybe the dev team wants to split up their production and testing environments, or the marketing team wants a specific marketing website, or if the organization wants to set up different projects, then solidating would keep all the billing transparent.
 
@@ -78,12 +76,13 @@ Maybe the dev team wants to split up their production and testing environments, 
 - Allows an organization to create a payer AWS account to view andn pay combined billing charges for all linked accounts in an organization:
 - Independent account, but can't use any other services
 - Cannot deploy services into the linked accounts
-- All resource usage becomes consolidated as usage from one large entity- organization may be eligible for volume discounts because of the combined usage
+- All resource usage becomes consolidated as usage from one large entity
+- Organization may be eligible for volume discounts because of the combined usage
 - Must use for the account department and to take advantage of pricing discounts, and its free
 
 ## Support and Billing Resources
 ### AWS Support Plans
-Depending on the level of infrastructure, needs, budget, level of technical supports; these five plans can range. The support plan costs are in addition to your resource usage bill.
+Depending on the level of infrastructure, needs, budget, level of technical supports; these five plans can range. The support plan costs are in addition to resource usage bill.
 
 **Basic**
 - For experimenting or testing AWS
@@ -92,21 +91,21 @@ Depending on the level of infrastructure, needs, budget, level of technical supp
 - Account and billing inquiries
 - Service quota increase requests
 - Access to support forums and documentation
-- Access to AWS Health dashboard and AWS trusted advisor health checks
-- Great for a solo developer, newbie, or getting your feet wet, or in the process of evaluating cloud platforms
+- Access to AWS Health Dashboard and AWS Trusted Advisor health checks
+- Great for a solo developer, a newbie, or getting your feet wet, or in the process of evaluating cloud platforms
 
 **Developer**
 - For experimenting or testing in AWS
-- More customized support, like support tickets
-- But may not be enough for production costs
+- More customized support with support tickets
+- May not be enough for production costs
 - Minimum spend of $29 or 3% monthly of AWS charges
 - Everything in Basic Support plan
 - Access to best-practice guidance and building-block architecture support
 - Prioritized response on AWS re:Post, access to AWS Support App in Slack
 - Unlimited number of support cases via one primary contact (root user) with business-hour email access to cloud support associates
 - Support response times are 24 hours or less for general guidance, 12 hours or less for system impaired
-- Access to support automation workflows (SAW) Self service automations created by AWS support team  with AWSSupport prefix in AWS Support self-service runbooks
-- Runbooks: help you proactively monitor and identify network issues, collect and analyze logs, and troubleshoot common issues with AWS resources
+- Access to Support Automation Workflows (SAW), self service automations created by AWS support team  with AWSSupport prefix in AWS Support self-service runbooks
+- Runbooks: Proactively monitor and identify network issues, collect and analyze logs, and troubleshoot common issues with AWS resources
 
 **Business**
 - Minimum recommended plan for production workloads in AWS
@@ -154,12 +153,12 @@ Depending on the level of infrastructure, needs, budget, level of technical supp
 ### Finding AWS Resources
 Before signing up for a hefty plan for hiring a consultant, use the free documentation available on AWS.
 - AWS Whitepapers and guides
-- AWS blog
+- AWS Blog
 - AWS Documentaion
 - AWS re:Post
 - AWS Knowledge Center
-- AWS Partner networks (look into this)
-- AWS Marketplace (selling templates)
+- AWS Partner networks (Important*)
+- AWS Marketplace
 - AWS Support plans
 - AWS Trust and safety team
 - AWS Support center
