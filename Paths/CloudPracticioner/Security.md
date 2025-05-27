@@ -48,7 +48,7 @@ Identities in AWS can be human identities [users, people, customers, devs (workf
 **Controlling Access to AWS**
 Utilize *Roles* in IAM, has a list of cans and cannots, anyone with a role assumes this "costume" to have permissions to certain things. *Policies* define what a resource can and can't do and *Permissions* define whether an action is allowed or not
 
-**Traffic Conrtol**
+**Traffic Control**
 - Security groups (like a bouncer)
     - Protect at instance level
     - Stateful: Traffic allowed in is allowed out ("remembers")
