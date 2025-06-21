@@ -1,0 +1,12 @@
+[
+    {
+        "name": "nicoxmcd",
+        "url": "nicoxmcd.com",
+        "env": "dev"
+    },
+    {
+        "name": "gumiho",
+        "url": "gumihollc.com",
+        "env": "dev"
+    }
+]
