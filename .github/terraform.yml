@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       client:
-        description: Which client are you deploying to? Enter 'All' for all
+        description: Which client are you deploying? Enter 'All' for all
         required: true
         type: string
       script: 
