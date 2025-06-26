@@ -1,5 +1,5 @@
 # AWS Security (SCS-CO2)
-This section of the Professional Security exam is broken up into six domains:
+This section of the Specialty Security exam is broken up into six domains:
 - [Threat Detection and Incident Response](https://github.com/nicoxmcd/AWS/blob/main/Paths/AWSSecurity/Threat.md) (14%)
 - [Security Logging and Monitoring](https://github.com/nicoxmcd/AWS/blob/main/Paths/AWSSecurity/Logging.md) (18%)
 - [Infrastructure Security](https://github.com/nicoxmcd/AWS/blob/main/Paths/AWSSecurity/Infrastructure.md) (20%)
