@@ -1,5 +1,5 @@
 # AWS Cloud Computing
-## Certification paths:
+## Certification paths *that I want*
 **Cloud DevOps Engineer**: Cloud Practitioner -> Developer -> SysOps Admin -> Machine Learning -> DevOps Engineer
 > Design, deployment, and operations of large-scale global hybrid cloud computing environment, advocating for end-to-end automated CI/CD DevOps pipelines.
 
