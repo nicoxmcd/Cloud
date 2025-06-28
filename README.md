@@ -1,7 +1,8 @@
 # Cloud Infastructure & Preparation
 > This repository contains my notes for various certification exam (specifically AWS), Terraform, and CI/CD scripts for planning, applying, and destroying that infrastructure.
 
-# Creating an Admin User
+# Best Practices
+For all of the following steps, please follow [this tutorial](https://www.youtube.com/watch?v=_KhrGFV_Npw) on creating an Adminstrator user rather using the root account.
 
 
 # Creating OIDC for GitHub Actions
