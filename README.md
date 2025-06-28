@@ -1,6 +1,20 @@
 # Cloud Infastructure & Preparation
 > This repository contains my notes for various certification exam (specifically AWS), Terraform, and CI/CD scripts for planning, applying, and destroying that infrastructure.
 
+# Creating an Admin User
+
+
+# Creating OIDC for GitHub Actions
+Find IAM and go to identity providers to add a new identity provider:
+![Identity Provider](https://github.com/user-attachments/assets/bbc0f9a6-a334-43a7-b36b-8d636ef65c9e)
+Select OIDC, and input the following:
+![OIDC](https://github.com/user-attachments/assets/2f515c9f-03d3-4854-bd81-ee845737ecb9)
+```
+https://token.actions.githubusercontent.com
+sts.amazonaws.com
+```
+
+
 # Setting Up My Environment
 I downloaded and installed the AWS-CLI.
 
