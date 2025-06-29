@@ -48,3 +48,13 @@ It should return something like this:
     "Location": "/nicoxmcdportfolio"
 }
 ```
+Add a file to the bucket with this line:
+```
+aws s3 cp ./README.md s3://nicoxmcdportfolio
+```
+
+To check what files are inside a particular bucket:
+```
+aws s3 ls s3://nicoxmcdportfolio --recursive --human-readable --summarize
+```
+
