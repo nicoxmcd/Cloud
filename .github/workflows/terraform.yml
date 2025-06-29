@@ -64,4 +64,5 @@ jobs:
 
 
     - name: Terraform Apply
+      if: ${{ inputs.dry_run == false }}
       run: terraform apply -auto-approve
