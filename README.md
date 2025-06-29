@@ -70,3 +70,7 @@ $ aws s3 ls
 bucket_1
 bucket_2
 ```
+
+# Using AWS CLI
+When logging in as the Admin user, there was an option to get access keys:
+
