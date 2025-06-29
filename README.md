@@ -64,7 +64,7 @@ Profile                  Credentials              Sessions
 jonsmith                 jonsmith                 -
 
 # Start a subshell with temporary credentials
-$ aws-vault exec jonsmith
+$ aws-vault exec jonsmith 
 Starting subshell /bin/zsh, use `exit` to exit the subshell
 $ aws s3 ls
 bucket_1
@@ -73,4 +73,25 @@ bucket_2
 
 # Using AWS CLI
 When logging in as the Admin user, there was an option to get access keys:
+![Get access keys](https://github.com/user-attachments/assets/1c6ace11-1b1a-4633-b808-337bf2f6c1eb)
+Enter the following command to use the information from that tab to grant permission to your local environment, it'll direct you to a couple more steps and it'll be set up:
+```
+aws configure sso
+```
+![aws configure sso](https://github.com/user-attachments/assets/f34a43c2-f4c8-4d77-85d6-fa408e629c10)
 
+# Creating an S3 bucket
+To check what buckets are currently in S3, use the following command:
+```
+aws s3 ls
+```
+Creating a new S3 bucket, the bucket name must be in lowercase:
+```
+aws s3api create-bucket --bucket nicoxmcdportfolio --region us-east-1
+```
+It should return something like this:
+```
+{
+    "Location": "/nicoxmcdportfolio"
+}
+```
