@@ -23,55 +23,8 @@ Name your role and verify all the permission and you're good to go:
 Confirm they are linked by checking in the ARN in the trusted relationships:
 ![ARN](https://github.com/user-attachments/assets/888aafa4-6f61-4a9d-aadd-e8ae94e77cf0)
 
-# Setting Up My Environment
-I downloaded and installed the AWS-CLI.
-
-For the next step I needed to install [Chocolatey](https://chocolatey.org/install) which needs **Adminstrator privilege**. All you would need to do is run Powershell as Admin:
-```
-Set-ExecutionPolicy Bypass -Scope Process
-Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
-```
-
-To confirm the installation of chocolatey, this will output the version:
-```
-choco
-```
-
-I then installed awsvault to make sure that when I'm using the CLI, my credentials are hidden:
-```
-choco install aws-vault
-```
-Example from aws-vault repository:
-
-```
-# Store AWS credentials for the "jonsmith" profile
-$ aws-vault add jonsmith
-Enter Access Key Id: ABDCDEFDASDASF
-Enter Secret Key: %%%
-
-# Execute a command (using temporary credentials)
-$ aws-vault exec jonsmith -- aws s3 ls
-bucket_1
-bucket_2
-
-# open a browser window and login to the AWS Console
-$ aws-vault login jonsmith
-
-# List credentials
-$ aws-vault list
-Profile                  Credentials              Sessions
-=======                  ===========              ========
-jonsmith                 jonsmith                 -
-
-# Start a subshell with temporary credentials
-$ aws-vault exec jonsmith 
-Starting subshell /bin/zsh, use `exit` to exit the subshell
-$ aws s3 ls
-bucket_1
-bucket_2
-```
-
 # Using AWS CLI
+Download the AWS CLI by following [this link. ](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 When logging in as the Admin user, there was an option to get access keys:
 ![Get access keys](https://github.com/user-attachments/assets/1c6ace11-1b1a-4633-b808-337bf2f6c1eb)
 Enter the following command to use the information from that tab to grant permission to your local environment, it'll direct you to a couple more steps and it'll be set up:
