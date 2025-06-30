@@ -1,5 +1,5 @@
 name: Deploy Terraform
-run-name: Deploy ${{ inputs.project }} ${{ inputs.resource }}
+run-name: Deploy ${{ inputs.project }} with ${{ inputs.resource }} resource(s)
 
 on:
   workflow_dispatch:
@@ -26,7 +26,7 @@ on:
 permissions:
       id-token: write   # This is required for requesting the JWT
       contents: read    # This is required for actions/checkout
-      
+
 jobs:
   Terraform:
     runs-on: ubuntu-latest
