@@ -66,4 +66,6 @@ aws s3 rb s3://nicoxmcdportfolio
 ```
 # Terraform
 So after I created everything with AWS CLI, I read up on Terraform and thought that it would be more intuitive in the long run to use, so you *could* keep using CLI or the console, but Terraform might be better. My Terraform files are in the Terraform folder, separated by project, there's only one project as of right now.
-I also have a workflow set up that can deploy the resulting terraform plan.
+I also have a workflow set up that can deploy the resulting terraform plan:
+![workflow](https://github.com/user-attachments/assets/7abe7ae8-ab58-4ae5-8208-3a78bb885764)
+You have options to deploy from a different branch, which project (technically which directory, as of now I only have my portfolio), and which resource to update or deploy, if you wanted to do a single resource, however, it is better to just deploy all in case of dependencies.
