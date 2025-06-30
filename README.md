@@ -23,7 +23,7 @@ Name your role and verify all the permission and you're good to go:
 Confirm they are linked by checking in the ARN in the trusted relationships:
 ![ARN](https://github.com/user-attachments/assets/888aafa4-6f61-4a9d-aadd-e8ae94e77cf0)
 
-# Using AWS CLI
+# Using AWS CLI & S3
 Download the AWS CLI by following [this link. ](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 When logging in as the Admin user, there was an option to get access keys:
 ![Get access keys](https://github.com/user-attachments/assets/1c6ace11-1b1a-4633-b808-337bf2f6c1eb)
@@ -33,7 +33,6 @@ aws configure sso
 ```
 ![aws configure sso](https://github.com/user-attachments/assets/f34a43c2-f4c8-4d77-85d6-fa408e629c10)
 
-# Creating an S3 bucket
 To check what buckets are currently in S3, use the following command:
 ```
 aws s3 ls
@@ -57,4 +56,14 @@ To check what files are inside a particular bucket:
 ```
 aws s3 ls s3://nicoxmcdportfolio --recursive --human-readable --summarize
 ```
-
+To remove a file:
+```
+aws s3 rm s3://nicoxmcdportfolio/README.md
+```
+To remove a bucket, must be empty:
+```
+aws s3 rb s3://nicoxmcdportfolio
+```
+# Terraform
+So after I created everything with AWS CLI, I read up on Terraform and thought that it would be more intuitive in the long run to use, so you *could* keep using CLI or the console, but Terraform might be better. My Terraform files are in the Terraform folder, separated by project, there's only one project as of right now.
+I also have a workflow set up that can deploy the resulting terraform plan.
