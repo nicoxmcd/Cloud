@@ -24,7 +24,16 @@ Confirm they are linked by checking in the ARN in the trusted relationships:
 ![ARN](https://github.com/user-attachments/assets/888aafa4-6f61-4a9d-aadd-e8ae94e77cf0)
 
 # Using AWS CLI & S3
-Download the AWS CLI by following [this link. ](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+I downloaded the AWS CLI via a curl command:
+```
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+aws –version
+sudo apt update
+sudo apt install nodejs npm
+npm install -g @aws-amplify/cli
+```
 When logging in as the Admin user, there was an option to get access keys:
 ![Get access keys](https://github.com/user-attachments/assets/1c6ace11-1b1a-4633-b808-337bf2f6c1eb)
 Enter the following command to use the information from that tab to grant permission to your local environment, it'll direct you to a couple more steps and it'll be set up:
