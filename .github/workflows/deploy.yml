@@ -2,10 +2,17 @@ name: Deploy Static Site
 
 on:
     workflow_dispatch:
+        inputs:
+            project:
+                description: 'Which project are we deploying?'
+                required: true
+                type: choice
+                options:
+                    - nicoxmcdportfolio
 
 env:
   AWS_REGION : "us-east-1"
-  BUCKET_NAME: "nicoxmcdportfolio"
+  BUCKET_NAME: "${{ inputs.project }}"
 # Permission can be added at job level or workflow level    
 permissions:
       id-token: write   # This is required for requesting the JWT
@@ -14,14 +21,22 @@ jobs:
   Deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: ${{ secrets.ROLE_DEPLOY }}
           role-session-name: GitHub_to_AWS_via_FederatedOIDC
           aws-region: ${{ env.AWS_REGION }}
+          
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+            repository: nicoxmcd/${{ inputs.project }}
+            path: ./${{ inputs.project }}
+            submodules: recursive
+          
       - name: Deploy to S3
+        working-directory: ./${{ inputs.project }}
         run: |
+          ls
           aws s3 cp ./README.md s3://${{ env.BUCKET_NAME }}
