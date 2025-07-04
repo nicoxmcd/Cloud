@@ -2,8 +2,6 @@ resource "aws_cloudfront_origin_access_identity" "oai" {
   comment = "OAI for nicoxmcdportfolio bucket"
 }
 
-
-
 resource "aws_cloudfront_distribution" "cdn" {
   origin {
     domain_name = aws_s3_bucket.portfolio.bucket_regional_domain_name

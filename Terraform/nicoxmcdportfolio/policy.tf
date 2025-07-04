@@ -1,7 +1,3 @@
-resource "aws_cloudfront_origin_access_identity" "oai" {
-  comment = "OAI for nicoxmcdportfolio bucket"
-}
-
 resource "aws_s3_bucket_policy" "bucket_policy" {
   bucket = aws_s3_bucket.portfolio.id
 
