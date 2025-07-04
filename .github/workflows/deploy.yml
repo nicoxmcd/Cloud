@@ -36,5 +36,6 @@ jobs:
             submodules: recursive
           
       - name: Deploy to S3
+        working-directory: ./${{ inputs.project }}
         run: |
-          aws s3 cp ./${{ inputs.project }} s3://${{ env.BUCKET_NAME }}
+          aws s3 sync . s3://${{ env.BUCKET_NAME }}
