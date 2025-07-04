@@ -39,4 +39,4 @@ jobs:
         working-directory: ./${{ inputs.project }}
         run: |
           ls
-          aws s3 cp ./README.md s3://${{ env.BUCKET_NAME }}
+          aws s3 cp . s3://${{ env.BUCKET_NAME }}
