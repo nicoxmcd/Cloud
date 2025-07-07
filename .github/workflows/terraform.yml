@@ -54,6 +54,14 @@ jobs:
     - name: Terraform Init
       run: terraform init
 
+    - name: Terraform Import (S3 Bucket)
+      run: |
+        terraform import aws_s3_bucket.portfolio nicoxmcdportfolio
+
+    - name: Terraform Import (Route53 Zone)
+      run: |
+        terraform import aws_route53_zone.main Z06077682QPQ47SHNGLDN
+
     - name: Terraform Plan
       run: |
         if [ ${{ inputs.resource }} == 'All' ]; then
@@ -66,5 +74,4 @@ jobs:
     - name: Terraform Apply
       if: ${{ inputs.dry_run == false }}
       run: |
-        terraform import aws_s3_bucket.portfolio nicoxmcdportfolio
         terraform apply -auto-approve
