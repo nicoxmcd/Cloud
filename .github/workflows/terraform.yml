@@ -67,7 +67,7 @@ jobs:
     
     - name: Terraform Import (CloudFront)
       run: |
-        terraform import aws_cloudfront_distribution.cdn E2GNSXURA828J0
+        terraform import aws_cloudfront_distribution.cdn E2XW953XY0MSBC
 
     - name: Terraform Plan
       run: |
