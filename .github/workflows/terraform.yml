@@ -65,4 +65,6 @@ jobs:
 
     - name: Terraform Apply
       if: ${{ inputs.dry_run == false }}
-      run: terraform apply -auto-approve
+      run: |
+        terraform import aws_s3_bucket.portfolio nicoxmcdportfolio
+        terraform apply -auto-approve
