@@ -1,6 +1,5 @@
 data "aws_cloudfront_origin_access_identity" "oai" {
   id = "E283AV0I62ZFQR"
-  comment = "OAI for nicoxmcdportfolio bucket"
 }
 
 resource "aws_cloudfront_distribution" "cdn" {
@@ -9,7 +8,7 @@ resource "aws_cloudfront_distribution" "cdn" {
     origin_id   = "S3-nicoxmcdportfolio"
 
     s3_origin_config {
-      origin_access_identity = aws_cloudfront_origin_access_identity.oai.cloudfront_access_identity_path
+      origin_access_identity = data.aws_cloudfront_origin_access_identity.oai.cloudfront_access_identity_path
     }
   }
 
