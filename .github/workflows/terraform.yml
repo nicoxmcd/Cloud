@@ -60,7 +60,7 @@ jobs:
         terraform import aws_route53_zone.main Z06077682QPQ47SHNGLDN
         terraform import aws_route53_record.www_a "Z06077682QPQ47SHNGLDN_www.nicoxmcd.com._A"
         terraform import aws_route53_record.apex_redirect "Z06077682QPQ47SHNGLDN_nicoxmcd.com._A"
-        terraform import aws_acm_certificate.cert arn:aws:acm:us-east-1:886436941448:certificate/583c8429-4397-43dc-9202-3bfdbdff5662
+        terraform import aws_acm_certificate.cert arn:aws:acm:us-east-1:886436941448:certificate/6d2bdc4e-7009-4fd4-a7e8-f4761565114f
         terraform import aws_cloudfront_distribution.cdn E2XW953XY0MSBC
 
     - name: Terraform Plan
