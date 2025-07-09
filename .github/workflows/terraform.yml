@@ -54,18 +54,13 @@ jobs:
     - name: Terraform Init
       run: terraform init
 
-    - name: Terraform Import (S3 Bucket)
+    - name: Terraform Import
       run: |
         terraform import aws_s3_bucket.portfolio nicoxmcdportfolio
-
-    - name: Terraform Import (Route53)
-      run: |
         terraform import aws_route53_zone.main Z06077682QPQ47SHNGLDN
         terraform import aws_route53_record.www_a "Z06077682QPQ47SHNGLDN_www.nicoxmcd.com._A"
         terraform import aws_route53_record.apex_redirect "Z06077682QPQ47SHNGLDN_nicoxmcd.com._A"
-    
-    - name: Terraform Import (CloudFront)
-      run: |
+        terraform import aws_acm_certificate.cert arn:aws:acm:us-east-1:886436941448:certificate/583c8429-4397-43dc-9202-3bfdbdff5662
         terraform import aws_cloudfront_distribution.cdn E2XW953XY0MSBC
 
     - name: Terraform Plan
@@ -76,8 +71,14 @@ jobs:
             terraform plan -target=${{ inputs.resource }}
         fi
 
-
     - name: Terraform Apply
       if: ${{ inputs.dry_run == false }}
       run: |
         terraform apply -auto-approve
+    
+    - name: Invalidate CloudFront Cache
+      if: ${{ inputs.dry_run == false }}
+      run: |
+        aws cloudfront create-invalidation \
+          --distribution-id E2XW953XY0MSBC \
+          --paths "/*"
