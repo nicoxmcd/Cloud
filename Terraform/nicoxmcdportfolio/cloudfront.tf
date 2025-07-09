@@ -4,11 +4,14 @@ data "aws_cloudfront_origin_access_identity" "oai" {
 
 resource "aws_cloudfront_distribution" "cdn" {
   origin {
-    domain_name = aws_s3_bucket.portfolio.bucket_regional_domain_name
+    domain_name = aws_s3_bucket.portfolio.website_endpoint
     origin_id   = "S3-nicoxmcdportfolio"
 
-    s3_origin_config {
-      origin_access_identity = data.aws_cloudfront_origin_access_identity.oai.cloudfront_access_identity_path
+    custom_origin_config {
+      http_port              = 80
+      https_port             = 443
+      origin_protocol_policy = "http-only" # Required for static website endpoints
+      origin_ssl_protocols   = ["TLSv1.2"]
     }
   }
 
@@ -31,9 +34,9 @@ resource "aws_cloudfront_distribution" "cdn" {
       }
     }
 
-    min_ttl                = 0
-    default_ttl            = 3600
-    max_ttl                = 86400
+    min_ttl     = 0
+    default_ttl = 3600
+    max_ttl     = 86400
   }
 
   price_class = "PriceClass_100"
@@ -49,7 +52,7 @@ resource "aws_cloudfront_distribution" "cdn" {
     ssl_support_method       = "sni-only"
     minimum_protocol_version = "TLSv1.2_2021"
   }
-  
+
   tags = {
     Project = var.domain_name
   }
