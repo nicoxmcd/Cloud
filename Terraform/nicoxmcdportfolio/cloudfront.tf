@@ -1,4 +1,5 @@
-resource "aws_cloudfront_origin_access_identity" "oai" {
+data "aws_cloudfront_origin_access_identity" "oai" {
+  id = "E283AV0I62ZFQR"
   comment = "OAI for nicoxmcdportfolio bucket"
 }
 
