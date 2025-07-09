@@ -16,7 +16,7 @@ resource "aws_cloudfront_distribution" "cdn" {
   comment             = "CloudFront distribution for ${aws_s3_bucket.portfolio.bucket}"
   default_root_object = "index.html"
 
-  aliases = [ "${var.domain_name}" ]
+  aliases = [ "${var.domain_name}","www.${var.domain_name}" ]
 
   custom_error_response {
     error_caching_min_ttl = 0
