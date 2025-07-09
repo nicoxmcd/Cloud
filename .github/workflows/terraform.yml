@@ -61,7 +61,7 @@ jobs:
     - name: Terraform Import (Route53)
       run: |
         terraform import aws_route53_zone.main Z06077682QPQ47SHNGLDN
-        # terraform import 'aws_route53_record.cert_validation' Z06077682QPQ47SHNGLDN__955604d57ca8e918164052fd045ac85f.nicoxmcd.com_CNAME
+        terraform import aws_route53_record.cert_validation Z06077682QPQ47SHNGLDN__955604d57ca8e918164052fd045ac85f.nicoxmcd.com
         terraform import aws_route53_record.www_a "Z06077682QPQ47SHNGLDN_www.nicoxmcd.com._A"
         terraform import aws_route53_record.apex_redirect "Z06077682QPQ47SHNGLDN_nicoxmcd.com._A"
     
