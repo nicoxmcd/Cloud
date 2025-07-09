@@ -38,4 +38,4 @@ jobs:
       - name: Deploy to S3
         working-directory: ./${{ inputs.project }}
         run: |
-          aws s3 sync . s3://${{ env.BUCKET_NAME }} --acl public-read
+          aws s3 sync . s3://${{ env.BUCKET_NAME }} 
