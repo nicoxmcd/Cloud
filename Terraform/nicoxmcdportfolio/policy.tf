@@ -8,7 +8,7 @@ resource "aws_s3_bucket_policy" "bucket_policy" {
         Sid    = "AllowCloudFrontServiceGetObject",
         Effect = "Allow",
         Principal = {
-          AWS = aws_cloudfront_origin_access_identity.oai.iam_arn
+          AWS = data.aws_cloudfront_origin_access_identity.oai.iam_arn
         },
         Action   = "s3:GetObject",
         Resource = "${aws_s3_bucket.portfolio.arn}/*"
