@@ -56,12 +56,16 @@ jobs:
 
     - name: Terraform Import
       run: |
-        jq -c '.[]' import.json | while read -r item; do
-          resource=$(echo "$item" | jq -r '.resource')
-          id=$(echo "$item" | jq -r '.id')
-          echo "Importing $resource with ID $id"
-          terraform import "$resource" "$id"
-        done
+        if [ -f import.json ]; then
+          jq -c '.[]' import.json | while read -r item; do
+            resource=$(echo "$item" | jq -r '.resource')
+            id=$(echo "$item" | jq -r '.id')
+            echo "Importing $resource with ID $id"
+            terraform import "$resource" "$id"
+          done
+        else
+          echo "import.json not found."
+        fi
 
     - name: Terraform Plan
       run: |
