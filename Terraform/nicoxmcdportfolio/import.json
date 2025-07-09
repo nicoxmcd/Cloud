@@ -1,0 +1,27 @@
+[
+  {
+    "resource": "aws_s3_bucket.portfolio",
+    "id": "nicoxmcdportfolio"
+  },
+    {
+    "resource": "aws_route53_zone.main",
+    "id": "Z06077682QPQ47SHNGLDN"
+  },
+    {
+    "resource": "aws_route53_record.www_a",
+    "id": "Z06077682QPQ47SHNGLDN_www.nicoxmcd.com._A"
+  },
+    {
+    "resource": "aws_route53_record.apex_redirect",
+    "id": "Z06077682QPQ47SHNGLDN_nicoxmcd.com._A"
+  },
+    {
+    "resource": "aws_acm_certificate.cert",
+    "id": "arn:aws:acm:us-east-1:886436941448:certificate/6d2bdc4e-7009-4fd4-a7e8-f4761565114f"
+  },
+    {
+    "resource": "aws_cloudfront_distribution.cdn",
+    "id": "E2XW953XY0MSBC"
+  }
+
+]
