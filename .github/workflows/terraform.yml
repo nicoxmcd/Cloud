@@ -56,8 +56,11 @@ jobs:
 
     - name: Terraform Import
       run: |
-        jq -c '.[]' import.json | while read i; do
-          terraform import $resource $id
+        jq -c '.[]' import.json | while read -r item; do
+          resource=$(echo "$item" | jq -r '.resource')
+          id=$(echo "$item" | jq -r '.id')
+          echo "Importing $resource with ID $id"
+          terraform import "$resource" "$id"
         done
 
     - name: Terraform Plan
@@ -74,8 +77,10 @@ jobs:
         terraform apply -auto-approve
     
     - name: Invalidate CloudFront Cache
-      if: ${{ inputs.dry_run == false }}
+      #if: ${{ inputs.dry_run == false }}
       run: |
+        distribution_id=$(jq -r '.[] | select(.resource == "aws_cloudfront_distribution.cdn") | .id' import.json)
+        echo "Invalidating CloudFront distribution $distribution_id"
         aws cloudfront create-invalidation \
-          --distribution-id E2XW953XY0MSBC \
+          --distribution-id "$distribution_id" \
           --paths "/*"
