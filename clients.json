@@ -1,12 +1,13 @@
 [
     {
         "name": "nicoxmcd",
-        "id": "nicoxmcdportfolio",
+        "repo": "nicoxmcdportfolio",
         "url": "nicoxmcd.com",
         "env": "dev"
     },
     {
         "name": "gumiho",
+        "repo": "thegreatgasbill/gumihollc"
         "url": "gumihollc.com",
         "env": "dev"
     }
