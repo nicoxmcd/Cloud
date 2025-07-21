@@ -28,14 +28,23 @@ jobs:
           role-session-name: GitHub_to_AWS_via_FederatedOIDC
           aws-region: ${{ env.AWS_REGION }}
           
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+            node-version: 'latest'
+            
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
             repository: nicoxmcd/${{ inputs.project }}
             path: ./${{ inputs.project }}
             submodules: recursive
+    
+      - name: Build
+        run: |
+            npm run build
           
       - name: Deploy to S3
         working-directory: ./${{ inputs.project }}
         run: |
-          aws s3 sync . s3://${{ env.BUCKET_NAME }} 
+          aws s3 sync /dist s3://${{ env.BUCKET_NAME }} 
