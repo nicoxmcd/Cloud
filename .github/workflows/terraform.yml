@@ -10,13 +10,6 @@ on:
         type: choice
         options:
           - nicoxmcdportfolio
-      resource:
-        description: 'Which resource are we deploying?'
-        required: true
-        type: choice
-        options:
-          - All
-          - aws_s3_bucket.portfolio
       dry_run:
         description: 'True for PLAN ONLY'
         required: true
