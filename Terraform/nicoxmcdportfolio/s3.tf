@@ -9,10 +9,10 @@ resource "aws_s3_bucket_website_configuration" "website_config" {
   bucket = aws_s3_bucket.portfolio.bucket
 
   index_document {
-    suffix = "src/pages/index.astro"
+    suffix = "index.astro"
   }
 
   error_document {
-    key = "src/pages/404.astro"
+    key = "404.astro"
   }
 }
