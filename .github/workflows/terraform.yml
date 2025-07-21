@@ -58,11 +58,8 @@ jobs:
 
     - name: Terraform Plan
       run: |
-        if [ ${{ inputs.resource }} == 'All' ]; then
-            terraform plan
-        else
-            terraform plan -target=${{ inputs.resource }}
-        fi
+        terraform plan
+
 
     - name: Terraform Apply
       if: ${{ inputs.dry_run == false }}
