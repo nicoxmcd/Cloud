@@ -39,6 +39,10 @@ jobs:
             repository: nicoxmcd/${{ inputs.project }}
             path: ./${{ inputs.project }}
             submodules: recursive
+     
+      - name: Install Dependencies
+        run: |
+            npm install
     
       - name: Build
         run: |
