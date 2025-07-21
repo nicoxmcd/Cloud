@@ -14,7 +14,7 @@ resource "aws_cloudfront_distribution" "cdn" {
   enabled             = true
   is_ipv6_enabled     = true
   comment             = "CloudFront distribution for ${aws_s3_bucket.portfolio.bucket}"
-  default_root_object = "src/pages/index.astro"
+  default_root_object = "index.html"
 
   aliases = [ "${var.domain_name}","www.${var.domain_name}" ]
 
@@ -22,7 +22,7 @@ resource "aws_cloudfront_distribution" "cdn" {
     error_caching_min_ttl = 0
     error_code            = 404
     response_code         = 200
-    response_page_path    = "src/pages/404.astro"
+    response_page_path    = "404.html"
   }
 
   default_cache_behavior {
