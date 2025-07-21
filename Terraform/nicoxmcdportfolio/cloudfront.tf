@@ -22,7 +22,7 @@ resource "aws_cloudfront_distribution" "cdn" {
     error_caching_min_ttl = 0
     error_code            = 404
     response_code         = 200
-    response_page_path    = "404.html"
+    response_page_path    = "/404.html"
   }
 
   default_cache_behavior {
