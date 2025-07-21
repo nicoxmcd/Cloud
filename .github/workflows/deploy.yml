@@ -53,4 +53,4 @@ jobs:
       - name: Deploy to S3
         working-directory: ./${{ inputs.project }}
         run: |
-          aws s3 sync /dist s3://${{ env.BUCKET_NAME }} 
+          aws s3 sync dist/ s3://${{ env.BUCKET_NAME }} 
