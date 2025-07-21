@@ -39,17 +39,15 @@ jobs:
             repository: nicoxmcd/${{ inputs.project }}
             path: ./${{ inputs.project }}
             submodules: recursive
-      - name: Test
-        run: |
-            ls
-            
      
       - name: Install Dependencies
         run: |
+            cd ${{ env.BUCKET_NAME }}
             npm install
     
       - name: Build
         run: |
+            cd ${{ env.BUCKET_NAME }}
             npm run build
           
       - name: Deploy to S3
