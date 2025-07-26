@@ -15,8 +15,8 @@ resource "aws_iam_role" "lambda_exec_role" {
 
 data "archive_file" "lambda" {
   type        = "zip"
-  source_file = "${path.module}/view-counter.py"
-  output_path = "${path.module}/view-counter.zip"
+  source_file = "view-counter.py"
+  output_path = "view-counter.zip"
 }
 
 resource "aws_iam_role_policy_attachment" "lambda_dynamodb_access" {
@@ -29,7 +29,7 @@ resource "aws_lambda_function" "view_counter" {
   handler       = "view-counter.lambda_handler"
   runtime       = "python3.11"
   role          = aws_iam_role.lambda_exec_role.arn
-  filename      = "filename = data.archive_file.lambda.output_path"
+  filename      = data.archive_file.lambda.output_path
 
   source_code_hash = data.archive_file.lambda.output_base64sha256
 
