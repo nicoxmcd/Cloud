@@ -5,10 +5,14 @@ dynamodb = boto3.resource("dynamodb")
 table = dynamodb.Table(os.environ["TABLE_NAME"])
 
 def lambda_handler(event, context):
-    response = table.update_item(
-        Key={"ID": "nicoxmcdportfolio"},
-        UpdateExpression="ADD views :inc",
-        ExpressionAttributeValues={":inc": 1},
-        ReturnValues="UPDATED_NEW"
-    )
-    return {"statusCode": 200, "body": str(response["Attributes"])}
+    # Retrieve the current visitor count
+    item = table.get_item(Key={"ID":"nicoxmcdportfolio"})
+    views = item["Item"]["views"]
+
+    # Increment the visitor count
+    views += 1
+
+    # Update the DynamoDB table with the new count
+    table.put_item(Item={"id": "0", "views": views})
+
+    return {"statusCode": 200, "body": views}
