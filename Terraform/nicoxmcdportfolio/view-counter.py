@@ -13,6 +13,6 @@ def lambda_handler(event, context):
     views += 1
 
     # Update the DynamoDB table with the new count
-    table.put_item(Item={"id": "0", "views": views})
+    table.put_item(Item={"ID":"nicoxmcdportfolio", "views": views})
 
     return {"statusCode": 200, "body": views}
