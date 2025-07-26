@@ -1,5 +1,5 @@
 name: Deploy Terraform
-run-name: Deploy ${{ inputs.project }} with ${{ inputs.resource }} resource(s)
+run-name: Deploy ${{ inputs.project }} infrastructure
 
 on:
   workflow_dispatch:
