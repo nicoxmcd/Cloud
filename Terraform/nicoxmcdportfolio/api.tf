@@ -1,6 +1,15 @@
 resource "aws_apigatewayv2_api" "api" {
   name          = "nicoxmcdportfolio-api"
   protocol_type = "HTTP"
+  
+  cors_configuration {
+    allow_origins     = ["*"]             
+    allow_methods     = ["GET","OPTIONS"]
+    allow_headers     = ["*"]   
+    expose_headers    = []             
+    allow_credentials = false    
+    max_age           = 3600        
+  }
 }
 
 resource "aws_lambda_permission" "api_invoke" {
@@ -23,6 +32,7 @@ resource "aws_apigatewayv2_route" "default_route" {
   api_id    = aws_apigatewayv2_api.api.id
   route_key = "GET /"
   target    = "integrations/${aws_apigatewayv2_integration.lambda_integration.id}"
+
 }
 
 resource "aws_apigatewayv2_stage" "default_stage" {
