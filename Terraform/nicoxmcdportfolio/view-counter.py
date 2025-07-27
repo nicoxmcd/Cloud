@@ -15,4 +15,10 @@ def lambda_handler(event, context):
     # Update the DynamoDB table with the new count
     table.put_item(Item={"ID":"nicoxmcdportfolio", "views": views})
 
-    return {"statusCode": 200, "body": views}
+    return {
+        "statusCode": 200,
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "body": json.dumps({"views": views})
+    }
