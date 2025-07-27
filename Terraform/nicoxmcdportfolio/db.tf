@@ -13,12 +13,12 @@ resource "aws_dynamodb_table" "db" {
   }
 }
 
-# resource "aws_dynamodb_table_item" "initial_view_count" {
-#   table_name = aws_dynamodb_table.db.name
-#   hash_key   = "ID"
-#   item       = jsonencode({
-#     ID    = { S = "nicoxmcdportfolio" },
-#     views = { N = "0" }
-#   })
-# }
+resource "aws_dynamodb_table_item" "initial_view_count" {
+  table_name = aws_dynamodb_table.db.name
+  hash_key   = "ID"
+  item       = jsonencode({
+    ID    = { S = "nicoxmcdportfolio" },
+    views = { N = "0" }
+  })
+}
 
