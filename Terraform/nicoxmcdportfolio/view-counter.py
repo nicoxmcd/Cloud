@@ -8,7 +8,7 @@ table = dynamodb.Table(os.environ["TABLE_NAME"])
 def lambda_handler(event, context):
     # Retrieve the current visitor count
     item = table.get_item(Key={"ID":"nicoxmcdportfolio"})
-    views = item["Item"]["views"]
+    views = int(item["Item"]["views"])
 
     # Increment the visitor count
     views += 1
