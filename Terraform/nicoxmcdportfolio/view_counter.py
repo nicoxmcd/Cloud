@@ -3,7 +3,7 @@ import json
 import os
 
 dynamodb = boto3.resource("dynamodb", region_name='us-east-1')
-table = dynamodb.Table(os.environ["TABLE_NAME"])
+table = dynamodb.Table("nicoxmcdportfolio-views")
 
 def lambda_handler(event, context):
     # Retrieve the current visitor count
