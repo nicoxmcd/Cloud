@@ -9,7 +9,6 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')
 
 import view_counter as vc
 
-
 class TestLambdaHandler(unittest.TestCase):
 
     @patch("view_counter.boto3.client")
@@ -19,16 +18,15 @@ class TestLambdaHandler(unittest.TestCase):
         # Mock DynamoDB put_item
         mock_table = MagicMock()
         mock_resource.return_value.Table.return_value = mock_table
-
-        event = {
-        }
+        mock_table.get_item.return_value = {"Item": {"views": 5}}
+        event = {}
 
         response = vc.lambda_handler(event, None)
         body = json.loads(response["body"])
 
         self.assertEqual(response["statusCode"], 200)
         self.assertIn("views", body)
-        self.assertEqual(body["views"], "View Count")
+        self.assertEqual(body["views"], 6)
 
 
 if __name__ == "__main__":
