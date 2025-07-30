@@ -45,7 +45,7 @@ jobs:
     - name: Run Unit Tests
       run: |
         export PYTHONPATH=.
-        python tests/tests_count.py
+        python tests/test_count.py
 
     - name: Set up Terraform
       uses: hashicorp/setup-terraform@v3
