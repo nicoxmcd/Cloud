@@ -6,13 +6,14 @@ import os
 
 # Ensure root directory is in path
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-import lambda_function as lf
+
+import view_counter as vc
 
 
 class TestLambdaHandler(unittest.TestCase):
 
-    @patch("lambda_function.boto3.client")
-    @patch("lambda_function.boto3.resource")
+    @patch("view_counter.boto3.client")
+    @patch("view_counter.boto3.resource")
 
     def test_generate_success(self, mock_resource, mock_client):
         # Mock DynamoDB put_item
@@ -22,7 +23,7 @@ class TestLambdaHandler(unittest.TestCase):
         event = {
         }
 
-        response = lf.lambda_handler(event, None)
+        response = vc.lambda_handler(event, None)
         body = json.loads(response["body"])
 
         self.assertEqual(response["statusCode"], 200)
