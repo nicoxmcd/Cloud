@@ -11,7 +11,7 @@ def lambda_handler(event, context):
     views = int(item["Item"]["views"])
 
     # Increment the visitor count
-    views += 5
+    views += 1
 
     # Update the DynamoDB table with the new count
     table.put_item(Item={"ID":"nicoxmcdportfolio", "views": views})
