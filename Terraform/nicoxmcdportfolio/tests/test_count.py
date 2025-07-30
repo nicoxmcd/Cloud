@@ -11,13 +11,11 @@ import view_counter as vc
 
 class TestLambdaHandler(unittest.TestCase):
 
-    @patch("view_counter.boto3.client")
-    @patch("view_counter.boto3.resource")
     @patch("view_counter.table")
 
-    def test_generate_success(self, mock_resource, mock_client):
+    def test_generate_success(self, mock_table):
         mock_table.get_item.return_value = {"Item": {"views": 5}}
-        
+
         event = {}
 
         response = vc.lambda_handler(event, None)
