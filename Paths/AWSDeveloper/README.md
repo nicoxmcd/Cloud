@@ -1,5 +1,5 @@
 # AWS Developer (DVA-CO2)
-This section of the Associate Developer exam is broken up into four domains:
+This section of the Associate Developer exam is broken up into four domains focused on cloud development:
 - [Development with AWS Services](https://github.com/nicoxmcd/AWS/blob/main/Paths/AWSDeveloper/Development.md) (32%)
 - [Security](https://github.com/nicoxmcd/AWS/blob/main/Paths/AWSDeveloper/Security.md) (26%)
 - [Deployment](https://github.com/nicoxmcd/AWS/blob/main/Paths/AWSDeveloper/Deployment.md) (24%)
