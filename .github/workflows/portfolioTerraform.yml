@@ -1,4 +1,4 @@
-name: Deploy Terraform
+name: Deploy Terraform Portfolio
 run-name: Deploy ${{ inputs.project }} infrastructure
 
 on:

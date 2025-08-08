@@ -1,5 +1,5 @@
 resource "aws_dynamodb_table" "db" {
-  name           = "nicoxmcdportfolio-views"
+  name           = "${var.bucket_name}-views"
   billing_mode   = "PAY_PER_REQUEST"
   hash_key       = "ID"
 

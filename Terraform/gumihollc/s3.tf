@@ -1,3 +1,22 @@
+resource "aws_s3_bucket" "portfolio" {
+  bucket = "${var.project_name}"
+  tags = {
+    Project = var.domain_name
+  }
+}
+
+resource "aws_s3_bucket_website_configuration" "website_config" {
+  bucket = aws_s3_bucket.portfolio.bucket
+
+  index_document {
+    suffix = "index.html"
+  }
+
+  error_document {
+    key = "404.html"
+  }
+}
+
 resource "aws_s3_bucket_policy" "bucket_policy" {
   bucket = aws_s3_bucket.portfolio.bucket
 
@@ -50,5 +69,28 @@ resource "aws_s3_bucket_cors_configuration" "cors" {
     allowed_methods = ["GET", "POST"]
     allowed_origins = ["https://${var.domain_name}","https://www.${var.domain_name}"]
     max_age_seconds = 3000
+  }
+}
+
+resource "aws_s3_bucket_versioning" "versioning" {
+  bucket = aws_s3_bucket.portfolio.id
+
+  versioning_configuration {
+    status = "Enabled"
+  }
+}
+
+resource "aws_s3_bucket_lifecycle_configuration" "versioning_lifecycle" {
+  bucket = aws_s3_bucket.portfolio.id
+  
+  rule {
+    id     = "expire-noncurrent-versions"
+    status = "Enabled"
+
+    filter {}
+
+    noncurrent_version_expiration {
+      noncurrent_days = 30
+    }
   }
 }

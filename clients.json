@@ -7,7 +7,7 @@
     },
     {
         "name": "gumiho",
-        "repo": "thegreatgasbill/gumihollc"
+        "repo": "gumihollc",
         "url": "gumihollc.com",
         "env": "dev"
     }

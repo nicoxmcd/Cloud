@@ -1,5 +1,5 @@
 resource "aws_apigatewayv2_api" "api" {
-  name          = "nicoxmcdportfolio-api"
+  name          = "${var.bucket_name}-api"
   protocol_type = "HTTP"
   
   cors_configuration {

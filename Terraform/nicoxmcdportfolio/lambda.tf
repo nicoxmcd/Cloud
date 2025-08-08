@@ -25,7 +25,7 @@ resource "aws_iam_role_policy_attachment" "lambda_dynamodb_access" {
 }
 
 resource "aws_lambda_function" "view_counter" {
-  function_name = "nicoxmcdportfolio-view-counter"
+  function_name = "${var.bucket_name}-view-counter"
   handler       = "view_counter.lambda_handler"
   runtime       = "python3.11"
   role          = aws_iam_role.lambda_exec_role.arn
