@@ -1,6 +1,6 @@
 terraform {
   backend "state" {
-    bucket         = "${var.project_name}-tfstate"
+    bucket         = "gumihollc-tfstate"
     key            = "terraform.tfstate"
     region         = "us-east-1"
     dynamodb_table = "terraform-locks"
