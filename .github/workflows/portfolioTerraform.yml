@@ -10,6 +10,7 @@ on:
         type: choice
         options:
           - nicoxmcdportfolio
+          - nicolexanportfolio
       dry_run:
         description: 'True for PLAN ONLY'
         required: true
@@ -74,6 +75,7 @@ jobs:
     - name: Invalidate CloudFront Cache
       if: ${{ inputs.dry_run == false }}
       run: |
+        var=`cat distribution.txt`
         aws cloudfront create-invalidation \
-          --distribution-id E2XW953XY0MSBC \
+          --distribution-id $var \
           --paths "/*"

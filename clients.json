@@ -10,5 +10,11 @@
         "repo": "gumihollc",
         "url": "gumihollc.com",
         "env": "dev"
+    },
+    {
+        "name": "nicolexan",
+        "repo": "nicolexanportfolio",
+        "url": "nicolexan.com",
+        "env": "dev"
     }
 ]
