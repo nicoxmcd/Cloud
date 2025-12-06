@@ -9,7 +9,7 @@ resource "aws_route53_zone" "main" {
 # Alias using DNS records pointing to CloudFront not directly to S3
 # Direct www.
 resource "aws_route53_record" "www_a" {
-  zone_id = aws_route53_zone.main.zone_id
+  zone_id = data.aws_route53_zone.main.zone_id
   name    = "www.${var.domain_name}"
   type    = "A"
 
@@ -22,7 +22,7 @@ resource "aws_route53_record" "www_a" {
 
 # Redirect apex non www. to www.
 resource "aws_route53_record" "apex_redirect" {
-  zone_id = aws_route53_zone.main.zone_id
+  zone_id = data.aws_route53_zone.main.zone_id
   name    = var.domain_name
   type    = "A"
 
