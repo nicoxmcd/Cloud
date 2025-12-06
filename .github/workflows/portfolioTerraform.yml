@@ -72,10 +72,10 @@ jobs:
       run: |
         terraform apply -auto-approve
     
-    - name: Invalidate CloudFront Cache
-      if: ${{ inputs.dry_run == false }}
-      run: |
-        var=`cat distribution.txt`
-        aws cloudfront create-invalidation \
-          --distribution-id $var \
-          --paths "/*"
+    # - name: Invalidate CloudFront Cache
+    #   if: ${{ inputs.dry_run == false }}
+    #   run: |
+    #     var=`cat distribution.txt`
+    #     aws cloudfront create-invalidation \
+    #       --distribution-id $var \
+    #       --paths "/*"
