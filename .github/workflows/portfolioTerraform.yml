@@ -61,16 +61,21 @@ jobs:
         aws-region: us-east-1
 
     - name: Terraform Init
-      run: terraform init
+      run: |
+        # terraform init
+        # from the repo dir with the same backend config
+        terraform init -reconfigure
+        terraform force-unlock -force 3615652d-d6d6-ff2c-1572-68820ea02555
+
 
     - name: Terraform Plan
       run: |
-        terraform plan
+        terraform plan -lock-timeout=5m
         
     - name: Terraform Apply
       if: ${{ inputs.dry_run == false }}
       run: |
-        terraform apply -auto-approve -lock=false
+        terraform apply -auto-approve -lock-timeout=5m
     
     # - name: Invalidate CloudFront Cache
     #   if: ${{ inputs.dry_run == false }}
