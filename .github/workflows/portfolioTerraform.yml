@@ -70,7 +70,7 @@ jobs:
     - name: Terraform Apply
       if: ${{ inputs.dry_run == false }}
       run: |
-        terraform apply -auto-approve
+        terraform apply -auto-approve -lock=false
     
     # - name: Invalidate CloudFront Cache
     #   if: ${{ inputs.dry_run == false }}
