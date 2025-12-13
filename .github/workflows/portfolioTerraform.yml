@@ -71,13 +71,13 @@ jobs:
     - name: Terraform Plan
       run: |
         terraform plan -lock-timeout=5m
+        terraform output
         
     - name: Terraform Apply
       if: ${{ inputs.dry_run == false }}
       run: |
-        terraform state show data.aws_route53_zone.main
         terraform apply -auto-approve -lock-timeout=5m
-        
+        terraform output
     
     # - name: Invalidate CloudFront Cache
     #   if: ${{ inputs.dry_run == false }}
