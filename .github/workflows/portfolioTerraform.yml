@@ -65,7 +65,7 @@ jobs:
         # terraform init
         # from the repo dir with the same backend config
         terraform init -reconfigure
-        # terraform force-unlock -force 20325a07-26f2-257d-2cd6-d8321f1d5238
+        terraform force-unlock -force 37a52ec5-17cb-f2be-0a77-5407ab66d17f
 
 
     - name: Terraform Plan
