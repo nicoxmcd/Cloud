@@ -3,7 +3,7 @@ import json
 import os
 
 dynamodb = boto3.resource("dynamodb", region_name='us-east-1')
-table = dynamodb.Table(os.environ["TABLE_NAME"])
+table = dynamodb.Table(os.environ.get("TABLE_NAME", "nicolexanportfolio-views"))
 
 def lambda_handler(event, context):
     response = table.update_item(

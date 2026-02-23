@@ -12,9 +12,8 @@ import view_counter as vc
 class TestLambdaHandler(unittest.TestCase):
 
     @patch("view_counter.table")
-
     def test_generate_success(self, mock_table):
-        mock_table.get_item.return_value = {"Item": {"views": 5}}
+        mock_table.update_item.return_value = {"Attributes": {"views": 6}}
 
         event = {}
 
