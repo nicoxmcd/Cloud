@@ -1,10 +1,10 @@
 variable "domain_name" {
   type = string
-  default = "nicolexan.com"
+  default = "nicoxmcd.com"
 }
 variable "bucket_name" {
   type = string
-  default = "nicolexanportfolio"
+  default = "nicoxmcdportfolio"
 }
 variable "region" {
     type = string
