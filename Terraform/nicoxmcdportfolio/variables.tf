@@ -1,12 +1,14 @@
 variable "domain_name" {
-  type = string
+  type    = string
   default = "nicoxmcd.com"
 }
-variable "bucket_name" {
-  type = string
-  default = "nicoxmcdportfolio"
+
+variable "redirect_target" {
+  type    = string
+  default = "nicolexan.com"
 }
+
 variable "region" {
-    type = string
-    default = "us-east-1"
+  type    = string
+  default = "us-east-1"
 }

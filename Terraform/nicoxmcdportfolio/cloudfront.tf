@@ -1,35 +1,47 @@
+resource "aws_cloudfront_origin_access_control" "oac" {
+  name                              = "${replace(var.domain_name, ".", "-")}-oac"
+  description                       = "OAC for ${var.domain_name} redirect origin"
+  origin_access_control_origin_type = "s3"
+  signing_behavior                  = "always"
+  signing_protocol                  = "sigv4"
+}
+
+resource "aws_cloudfront_function" "redirect" {
+  name    = "${replace(var.domain_name, ".", "-")}-redirect"
+  runtime = "cloudfront-js-2.0"
+  publish = true
+
+  code = <<-EOT
+    function handler(event) {
+      return {
+        statusCode: 301,
+        statusDescription: "Moved Permanently",
+        headers: {
+          location: { value: "https://${var.redirect_target}" + event.request.uri }
+        }
+      };
+    }
+  EOT
+}
+
 resource "aws_cloudfront_distribution" "cdn" {
   origin {
-    domain_name = aws_s3_bucket_website_configuration.website_config.website_endpoint
-    origin_id   = "S3-${aws_s3_bucket.portfolio.bucket}"
-
-    custom_origin_config {
-      http_port              = 80
-      https_port             = 443
-      origin_protocol_policy = "http-only" # required for S3 static website hosting
-      origin_ssl_protocols   = ["TLSv1", "TLSv1.1", "TLSv1.2"]
-    }
+    domain_name              = aws_s3_bucket.redirect_origin.bucket_regional_domain_name
+    origin_id                = "S3-redirect-origin"
+    origin_access_control_id = aws_cloudfront_origin_access_control.oac.id
   }
 
-  enabled             = true
-  is_ipv6_enabled     = true
-  comment             = "CloudFront distribution for ${aws_s3_bucket.portfolio.bucket}"
-  default_root_object = "index.html"
+  enabled         = true
+  is_ipv6_enabled = true
+  comment         = "Redirect ${var.domain_name} to ${var.redirect_target}"
 
-  aliases = [ "${var.domain_name}","www.${var.domain_name}" ]
-
-  custom_error_response {
-    error_caching_min_ttl = 0
-    error_code            = 404
-    response_code         = 200
-    response_page_path    = "/404.html"
-  }
+  aliases = [var.domain_name, "www.${var.domain_name}"]
 
   default_cache_behavior {
-    allowed_methods        = ["GET", "HEAD", "OPTIONS"]
+    allowed_methods        = ["GET", "HEAD"]
     cached_methods         = ["GET", "HEAD"]
-    target_origin_id       = "S3-${aws_s3_bucket.portfolio.bucket}"
-    viewer_protocol_policy = "redirect-to-https"
+    target_origin_id       = "S3-redirect-origin"
+    viewer_protocol_policy = "allow-all"
 
     forwarded_values {
       query_string = false
@@ -37,9 +49,15 @@ resource "aws_cloudfront_distribution" "cdn" {
         forward = "none"
       }
     }
-    min_ttl                = 31536000
-    default_ttl            = 31536000
-    max_ttl                = 31536000
+
+    function_association {
+      event_type   = "viewer-request"
+      function_arn = aws_cloudfront_function.redirect.arn
+    }
+
+    min_ttl     = 0
+    default_ttl = 0
+    max_ttl     = 0
   }
 
   price_class = "PriceClass_100"
