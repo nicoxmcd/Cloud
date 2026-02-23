@@ -63,7 +63,6 @@ jobs:
     - name: Terraform Init
       run: |
         # terraform init
-        # from the repo dir with the same backend config
         terraform init -reconfigure
         # terraform force-unlock -force 1374f99b-8dca-dbdd-755b-2ce1c87ef0ed
 
@@ -79,10 +78,10 @@ jobs:
         terraform apply -auto-approve -lock-timeout=5m
         terraform output
     
-    # - name: Invalidate CloudFront Cache
-    #   if: ${{ inputs.dry_run == false }}
-    #   run: |
-    #     var=`cat distribution.txt`
-    #     aws cloudfront create-invalidation \
-    #       --distribution-id $var \
-    #       --paths "/*"
+    - name: Invalidate CloudFront Cache
+      if: ${{ inputs.dry_run == false }}
+      run: |
+        var=`cat distribution.txt`
+        aws cloudfront create-invalidation \
+          --distribution-id $var \
+          --paths "/*"
