@@ -24,6 +24,11 @@ resource "aws_iam_role_policy_attachment" "lambda_dynamodb_access" {
   policy_arn = "arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess"
 }
 
+resource "aws_iam_role_policy_attachment" "lambda_logs_access" {
+  role       = aws_iam_role.lambda_exec_role.name
+  policy_arn = "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+}
+
 resource "aws_lambda_function" "view_counter" {
   function_name = "${var.bucket_name}-view-counter"
   handler       = "view_counter.lambda_handler"

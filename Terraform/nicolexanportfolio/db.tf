@@ -13,4 +13,18 @@ resource "aws_dynamodb_table" "db" {
   }
 }
 
+resource "aws_dynamodb_table_item" "initial_views" {
+  table_name = aws_dynamodb_table.db.name
+  hash_key   = aws_dynamodb_table.db.hash_key
+
+  item = jsonencode({
+    "ID"    = { "S" = "nicolexanportfolio" }
+    "views" = { "N" = "2289" }
+  })
+
+  lifecycle {
+    ignore_changes = [item]
+  }
+}
+
 

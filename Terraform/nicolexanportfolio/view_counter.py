@@ -3,18 +3,17 @@ import json
 import os
 
 dynamodb = boto3.resource("dynamodb", region_name='us-east-1')
-table = dynamodb.Table("nicolexanportfolio-views")
+table = dynamodb.Table(os.environ["TABLE_NAME"])
 
 def lambda_handler(event, context):
-    # Retrieve the current visitor count
-    item = table.get_item(Key={"ID":"nicolexanportfolio"})
-    views = int(item["Item"]["views"])
-
-    # Increment the visitor count
-    views += 1
-
-    # Update the DynamoDB table with the new count
-    table.put_item(Item={"ID":"nicolexanportfolio", "views": views})
+    response = table.update_item(
+        Key={"ID": "nicolexanportfolio"},
+        UpdateExpression="ADD #v :inc",
+        ExpressionAttributeNames={"#v": "views"},
+        ExpressionAttributeValues={":inc": 1},
+        ReturnValues="UPDATED_NEW"
+    )
+    views = int(response["Attributes"]["views"])
 
     return {
         "statusCode": 200,
