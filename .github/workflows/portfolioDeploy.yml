@@ -1,5 +1,5 @@
-name: Deploy Terraform Portfolio
-run-name: Deploy ${{ inputs.project }} infrastructure
+name: Deploy Portfolio
+run-name: Deploy infrastructure
 
 on:
   workflow_dispatch:
@@ -9,7 +9,6 @@ on:
         required: true
         type: choice
         options:
-          - nicoxmcdportfolio
           - nicolexanportfolio
       dry_run:
         description: 'True for PLAN ONLY'

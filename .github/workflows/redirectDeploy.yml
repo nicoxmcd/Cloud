@@ -1,0 +1,70 @@
+name: Deploy Redirect
+run-name: Deploy infrastructure
+
+on:
+  workflow_dispatch:
+    inputs:
+      project:
+        description: 'Which project are we deploying?'
+        required: true
+        type: choice
+        options:
+          - nicoxmcdportfolio
+      dry_run:
+        description: 'True for PLAN ONLY'
+        required: true
+        default: true
+        type: boolean
+
+permissions:
+      id-token: write   # This is required for requesting the JWT
+      contents: read    # This is required for actions/checkout
+
+jobs:
+  Terraform:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./Terraform/${{ inputs.project }}
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Terraform
+      uses: hashicorp/setup-terraform@v3
+      with:
+        terraform_version: 1.8.0 
+
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v4
+      with:
+        role-to-assume: ${{ secrets.ROLE_DEPLOY }}
+        role-session-name: GitHub_to_AWS_via_FederatedOIDC
+        aws-region: us-east-1
+
+    - name: Terraform Init
+      run: |
+        # terraform init
+        terraform init -reconfigure
+        # terraform force-unlock -force 1374f99b-8dca-dbdd-755b-2ce1c87ef0ed
+
+    - name: Terraform Plan
+      run: |
+        terraform plan -lock-timeout=5m
+        terraform output
+        
+    - name: Terraform Apply
+      if: ${{ inputs.dry_run == false }}
+      run: |
+        terraform apply -auto-approve -lock-timeout=5m
+        terraform output
+    
+    - name: Invalidate CloudFront Cache
+      if: ${{ inputs.dry_run == false }}
+      run: |
+        var=`cat distribution.txt`
+        aws cloudfront create-invalidation \
+          --distribution-id $var \
+          --paths "/*"
