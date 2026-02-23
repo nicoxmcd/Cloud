@@ -1,11 +1,11 @@
 # AWS DevOps Engineer (DOP-CO2)
 This section of the Professional DevOps Engineer exam is broken up into six domains:
-- [SDLC Automation](https://github.com/nicoxmcd/AWS/blob/main/Paths/AWSDevOpsEngineer/SDLC.md) (22%)
-- [Configuration Management and IaC](https://github.com/nicoxmcd/AWS/blob/main/Paths/AWSDevOpsEngineer/IaC.md) (17%)
-- [Resilient Cloud Solutions](https://github.com/nicoxmcd/AWS/blob/main/Paths/AWSDevOpsEngineer/Solutions.md) (15%)
-- [Monitoring and Logging](https://github.com/nicoxmcd/AWS/blob/main/Paths/AWSDevOpsEngineer/Monitoring.md) (15%)
-- [Incident and Event Response](https://github.com/nicoxmcd/AWS/blob/main/Paths/AWSDevOpsEngineer/Response.md) (14%)
-- [Security and Compliance](https://github.com/nicoxmcd/AWS/blob/main/Paths/AWSDevOpsEngineer/Compliance.md) (17%)
+- [SDLC Automation](https://github.com/nicolexan/AWS/blob/main/Paths/AWSDevOpsEngineer/SDLC.md) (22%)
+- [Configuration Management and IaC](https://github.com/nicolexan/AWS/blob/main/Paths/AWSDevOpsEngineer/IaC.md) (17%)
+- [Resilient Cloud Solutions](https://github.com/nicolexan/AWS/blob/main/Paths/AWSDevOpsEngineer/Solutions.md) (15%)
+- [Monitoring and Logging](https://github.com/nicolexan/AWS/blob/main/Paths/AWSDevOpsEngineer/Monitoring.md) (15%)
+- [Incident and Event Response](https://github.com/nicolexan/AWS/blob/main/Paths/AWSDevOpsEngineer/Response.md) (14%)
+- [Security and Compliance](https://github.com/nicolexan/AWS/blob/main/Paths/AWSDevOpsEngineer/Compliance.md) (17%)
 
 ## SDLC Automation
 - Implement CI/CD pipelines

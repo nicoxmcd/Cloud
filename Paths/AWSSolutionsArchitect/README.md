@@ -1,9 +1,9 @@
 # AWS Solutions Architect (SAA-CO3)
 This section of the Associate Solutions Architect exam is broken up into four domains:
-- [Design Secure Architectures](https://github.com/nicoxmcd/AWS/blob/main/Paths/AWSSolutionsArchitect/Secure.md) (30%)
-- [Design Resilient Architectures](https://github.com/nicoxmcd/AWS/blob/main/Paths/AWSSolutionsArchitect/Resilient.md) (26%)
-- [Design High-Performing Architectures](https://github.com/nicoxmcd/AWS/blob/main/Paths/AWSSolutionsArchitect/Performance.md) (24%)
-- [Design Cost-Optimized Architectures](https://github.com/nicoxmcd/AWS/blob/main/Paths/AWSSolutionsArchitect/Cost.md) (20%)
+- [Design Secure Architectures](https://github.com/nicolexan/AWS/blob/main/Paths/AWSSolutionsArchitect/Secure.md) (30%)
+- [Design Resilient Architectures](https://github.com/nicolexan/AWS/blob/main/Paths/AWSSolutionsArchitect/Resilient.md) (26%)
+- [Design High-Performing Architectures](https://github.com/nicolexan/AWS/blob/main/Paths/AWSSolutionsArchitect/Performance.md) (24%)
+- [Design Cost-Optimized Architectures](https://github.com/nicolexan/AWS/blob/main/Paths/AWSSolutionsArchitect/Cost.md) (20%)
 
 
 ## Secure Architecture

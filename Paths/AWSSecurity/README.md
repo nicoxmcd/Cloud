@@ -1,11 +1,11 @@
 # AWS Security (SCS-CO2)
 This section of the Specialty Security exam is broken up into six domains:
-- [Threat Detection and Incident Response](https://github.com/nicoxmcd/AWS/blob/main/Paths/AWSSecurity/Threat.md) (14%)
-- [Security Logging and Monitoring](https://github.com/nicoxmcd/AWS/blob/main/Paths/AWSSecurity/Logging.md) (18%)
-- [Infrastructure Security](https://github.com/nicoxmcd/AWS/blob/main/Paths/AWSSecurity/Infrastructure.md) (20%)
-- [Identity and Access Management](https://github.com/nicoxmcd/AWS/blob/main/Paths/AWSSecurity/IAM.md) (16%)
-- [Data Protection](https://github.com/nicoxmcd/AWS/blob/main/Paths/AWSSecurity/DataProtection.md) (18%)
-- [Management and Security Governance](https://github.com/nicoxmcd/AWS/blob/main/Paths/AWSSecurity/Governance.md) (14%)
+- [Threat Detection and Incident Response](https://github.com/nicolexan/AWS/blob/main/Paths/AWSSecurity/Threat.md) (14%)
+- [Security Logging and Monitoring](https://github.com/nicolexan/AWS/blob/main/Paths/AWSSecurity/Logging.md) (18%)
+- [Infrastructure Security](https://github.com/nicolexan/AWS/blob/main/Paths/AWSSecurity/Infrastructure.md) (20%)
+- [Identity and Access Management](https://github.com/nicolexan/AWS/blob/main/Paths/AWSSecurity/IAM.md) (16%)
+- [Data Protection](https://github.com/nicolexan/AWS/blob/main/Paths/AWSSecurity/DataProtection.md) (18%)
+- [Management and Security Governance](https://github.com/nicolexan/AWS/blob/main/Paths/AWSSecurity/Governance.md) (14%)
 
 ## Threat Detection and Incident Response
 - Design and implement an incident response plan

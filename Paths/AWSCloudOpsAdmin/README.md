@@ -1,11 +1,11 @@
 # AWS SysOps Admin (SOA-CO2)
 This section of the Associate SysOps Admin exam is broken up into six domains:
-- [Monitoring, Logging, and Remediation](https://github.com/nicoxmcd/AWS/blob/main/Paths/AWSSysOpsAdmin/Monitoring.md) (20%)
-- [Reliability and Business Continuity](https://github.com/nicoxmcd/AWS/blob/main/Paths/AWSSysOpsAdmin/Reliability.md) (16%)
-- [Deployment, Provisioning, and Automation](https://github.com/nicoxmcd/AWS/blob/main/Paths/AWSSysOpsAdmin/Deployment.md) (18%)
-- [Security and Compliance](https://github.com/nicoxmcd/AWS/blob/main/Paths/AWSSysOpsAdmin/Security.md) (16%)
-- [Networking and Content Delivery](https://github.com/nicoxmcd/AWS/blob/main/Paths/AWSSysOpsAdmin/Networking.md) (18%)
-- [Cost and Performance Optimization](https://github.com/nicoxmcd/AWS/blob/main/Paths/AWSSysOpsAdmin/Performance.md) (12%)
+- [Monitoring, Logging, and Remediation](https://github.com/nicolexan/AWS/blob/main/Paths/AWSSysOpsAdmin/Monitoring.md) (20%)
+- [Reliability and Business Continuity](https://github.com/nicolexan/AWS/blob/main/Paths/AWSSysOpsAdmin/Reliability.md) (16%)
+- [Deployment, Provisioning, and Automation](https://github.com/nicolexan/AWS/blob/main/Paths/AWSSysOpsAdmin/Deployment.md) (18%)
+- [Security and Compliance](https://github.com/nicolexan/AWS/blob/main/Paths/AWSSysOpsAdmin/Security.md) (16%)
+- [Networking and Content Delivery](https://github.com/nicolexan/AWS/blob/main/Paths/AWSSysOpsAdmin/Networking.md) (18%)
+- [Cost and Performance Optimization](https://github.com/nicolexan/AWS/blob/main/Paths/AWSSysOpsAdmin/Performance.md) (12%)
 
 ## Monitoring, Logging, and Remediation
 - Implement metrics, alarms, and filters by using AWS monitoring and logging services

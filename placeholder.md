@@ -11,7 +11,7 @@ Select OIDC, and input the following:
 https://token.actions.githubusercontent.com
 sts.amazonaws.com
 ```
-Then we created a role that would allow the OIDC to deploy my portfolio to a S3 bucket. First create a new role, and select web identity and select the github OIDC that you added along with the audience, from there add your organization, or in this case, your username. There is also an option to specify your repositories or to allow any of them, use your discretion, I personally only allowed this repository nicoxmcd/nicoxmcd:*:
+Then we created a role that would allow the OIDC to deploy my portfolio to a S3 bucket. First create a new role, and select web identity and select the github OIDC that you added along with the audience, from there add your organization, or in this case, your username. There is also an option to specify your repositories or to allow any of them, use your discretion, I personally only allowed this repository nicolexan/nicolexan:*:
 ![Creating Role](https://github.com/user-attachments/assets/26b3429b-b8ef-4d76-92df-0287c21223f5)
 In the next step, you can specify the permissions you want to give the role, for me I just allowed the S3 full access permission and CloudFrontFullAccess:
 ![S3 Full Access](https://github.com/user-attachments/assets/7c68e15d-583a-4953-90d9-60d1521c1d34)
@@ -45,30 +45,30 @@ aws s3 ls
 ```
 Creating a new S3 bucket, the bucket name must be in lowercase:
 ```
-aws s3api create-bucket --bucket nicoxmcdportfolio --region us-east-1
+aws s3api create-bucket --bucket nicolexanportfolio --region us-east-1
 ```
 It should return something like this:
 ```
 {
-    "Location": "/nicoxmcdportfolio"
+    "Location": "/nicolexanportfolio"
 }
 ```
 Add a file to the bucket with this line:
 ```
-aws s3 cp ./README.md s3://nicoxmcdportfolio
+aws s3 cp ./README.md s3://nicolexanportfolio
 ```
 
 To check what files are inside a particular bucket:
 ```
-aws s3 ls s3://nicoxmcdportfolio --recursive --human-readable --summarize
+aws s3 ls s3://nicolexanportfolio --recursive --human-readable --summarize
 ```
 To remove a file:
 ```
-aws s3 rm s3://nicoxmcdportfolio/README.md
+aws s3 rm s3://nicolexanportfolio/README.md
 ```
 To remove a bucket, must be empty:
 ```
-aws s3 rb s3://nicoxmcdportfolio
+aws s3 rb s3://nicolexanportfolio
 ```
 # Terraform
 So after I created everything with AWS CLI, I read up on Terraform and thought that it would be more intuitive in the long run to use, so you *could* keep using CLI or the console, but Terraform might be better. My Terraform files are in the Terraform folder, separated by project, there's only one project as of right now.

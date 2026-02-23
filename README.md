@@ -9,6 +9,6 @@ I'm currently designing the frontend of my Portfolio, as of now I have the backe
 
 ### Resources
 - [Cloud Resume Challenge Site](https://cloudresumechallenge.dev/docs/the-challenge/aws/)
-- [My Source Code](https://github.com/nicoxmcd/nicoxmcdportfolio)
-- [Terraform Files](https://github.com/nicoxmcd/Cloud/tree/main/Terraform/nicoxmcdportfolio)
-- [Terraform Deploy Workflow](https://github.com/nicoxmcd/Cloud/blob/main/.github/workflows/terraform.yml)
+- [My Source Code](https://github.com/nicolexan/nicolexanportfolio)
+- [Terraform Files](https://github.com/nicolexan/Cloud/tree/main/Terraform/nicolexanportfolio)
+- [Terraform Deploy Workflow](https://github.com/nicolexan/Cloud/blob/main/.github/workflows/terraform.yml)

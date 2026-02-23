@@ -1,9 +1,9 @@
 # AWS Certified Cloud Practicioner (CLF-CO2)
 These pages cover AWS concepts, security and compliance, core services, and economics as introduced by Hiroko Nishimura. This section of the Cloud Practicioner path is broken up into four domains in the certification exam:
-- [Cloud Concepts](https://github.com/nicoxmcd/AWS/blob/main/Paths/AWSCloudPracticioner/Concepts.md) (24%)
-- [Security and Compliance](https://github.com/nicoxmcd/AWS/blob/main/Paths/AWSCloudPracticioner/Security.md) (30%)
-- [Cloud Technology and Services](https://github.com/nicoxmcd/AWS/blob/main/Paths/AWSCloudPracticioner/Services.md) (34%)
-- [Bill, Pricing, and Support](https://github.com/nicoxmcd/AWS/blob/main/Paths/AWSCloudPracticioner/Support.md) (12%)
+- [Cloud Concepts](https://github.com/nicolexan/AWS/blob/main/Paths/AWSCloudPracticioner/Concepts.md) (24%)
+- [Security and Compliance](https://github.com/nicolexan/AWS/blob/main/Paths/AWSCloudPracticioner/Security.md) (30%)
+- [Cloud Technology and Services](https://github.com/nicolexan/AWS/blob/main/Paths/AWSCloudPracticioner/Services.md) (34%)
+- [Bill, Pricing, and Support](https://github.com/nicolexan/AWS/blob/main/Paths/AWSCloudPracticioner/Support.md) (12%)
 
 ## Cloud Concepts
 - Define value proposition
