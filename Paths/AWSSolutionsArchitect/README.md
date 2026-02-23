@@ -1,0 +1,177 @@
+# AWS Solutions Architect (SAA-CO3)
+This section of the Associate Solutions Architect exam is broken up into four domains:
+- [Design Secure Architectures](https://github.com/nicoxmcd/AWS/blob/main/Paths/AWSSolutionsArchitect/Secure.md) (30%)
+- [Design Resilient Architectures](https://github.com/nicoxmcd/AWS/blob/main/Paths/AWSSolutionsArchitect/Resilient.md) (26%)
+- [Design High-Performing Architectures](https://github.com/nicoxmcd/AWS/blob/main/Paths/AWSSolutionsArchitect/Performance.md) (24%)
+- [Design Cost-Optimized Architectures](https://github.com/nicoxmcd/AWS/blob/main/Paths/AWSSolutionsArchitect/Cost.md) (20%)
+
+
+## Secure Architecture
+
+## Resilient Architecture
+
+## High-Performing Architecture
+
+## Cost-Optimized Architecture
+
+## Technologies and Concepts
+- Compute
+- Cost Management
+- Database
+- Disaster Recovery
+- High Performance
+- Management and Governance
+- Microservices and component delivery
+- Migration and data transfer
+- Networking, connectivity, and content delivery
+- Resiliency
+- Security
+- Serverless and event-driven design principles
+- Storage
+
+## In-Scope AWS Services and Features
+- Analytics
+    - Amazon Athena
+    - AWS Data Exchange
+    - AWS Data Pipeline
+    - Amazon EMR
+    - AWS Glue
+    - Amazon Kinesis
+    - AWS Lake Formation
+    - Amazon Managed Streaming for Apache Kafka (Amazon MSK)
+    - Amazon OpenSearch Service
+    - Amazon QuickSight
+    - Amazon Redshift
+- Application Integration
+    - Amazon AppFlow
+    - AWS AppSync
+    - Amazon MQ
+    - Amazon Simple Notification Service (Amazon SNS)
+    - Amazon Simple Queue Service (Amazon SQS)
+    - AWS Step Functions
+- AWS Cost Management
+    - AWS Budgets
+    - AWS Cost and Usage Report
+    - AWS Cost Explorer
+    - Savings Plans
+- Compute
+    - AWS Batch
+    - Amazon EC2
+    - Amazon EC2 Auto Scaling
+    - AWS Elastic Beanstalk
+    - AWS Outposts
+    - AWS Serverless Application Respository
+    - VMware Cloud on AWS
+    - AWS Wavelength
+- Containers
+    - Amazon ECS Anywhere
+    - Amazon EKS Anywhere
+    - Amazon EKS Distro
+    - Amazon Elastic Container Registry (ECR)
+    - Amazon Elastic Container Service (ECS)
+    - Amazon Elastic Kubernetes Service (EKS)
+- Database
+    - Amazon Aurora
+    - Amazon Aurora Serverless
+    - Amazon DocumentDB (with MongoDB compatibility)
+    - Amazon DynamoDB
+    - Amazon ElastiCache
+    - Amazon Keyspaces (for Apache Cassandra)
+    - Amazon Neptune
+    - Amazon Quantum Ledger Database (QLDB)
+    - Amazon RDS
+    - Amazon Redshift 
+- Developer Tools
+    - AWS X-Ray
+- Front-End Web and Mobile
+    - AWS Amplify
+    - Amazon API Gateway
+    - AWS Device Farm
+    - Amazon Pinpoint
+- Machine Learning
+    - Amazon Comprehend
+    - Amazon Forecast
+    - Amazon Fraud Detector
+    - Amazon Kendra
+    - Amazon Lex
+    - Amazon Polly
+    - Amazon Rekognition
+    - Amazon SageMaker
+    - Amazon Textract
+    - Amazon Transcribe
+    - Amazon Translate
+- Management and Governance
+    - AWS Auto Scaling
+    - AWS CloudFormation
+    - AWS CloudTrail
+    - Amazon CloudWatch
+    - AWS Command Line Interface (AWS CLI)
+    - AWS Compute Optimizer
+    - AWS Config
+    - AWS Control Tower
+    - AWS Health Dashboard
+    - AWS License Manager
+    - Amazon Managed Grafana
+    - Amazon Managed Service for Prometheus
+    - AWS Management Console
+    - AWS Organizations
+    - AWS Proton
+    - AWS Service Catalog
+    - AWS Systems Manager
+    - AWS Trusted Advisor
+    - AWS Well-Architected Tool
+- Media Services
+    - Amazon Elastic Transcoder
+    - Amazon Kinesis Video Streams
+- Migration and Transfer
+    - AWS Application Discovery Service
+    - AWS Application Migration Service
+    - AWS Database Migration Service (AWS DMS)
+    - AWS DataSync
+    - AWS Migration Hub
+    - AWS Snow Family
+    - AWS Transfer Family
+- Networking and Content Delivery
+    - AWS Client VPN
+    - Amazon CloudFront
+    - AWS Direct Connect
+    - Elastic Load Balancing (ELB)
+    - AWS Global Accelerator
+    - AWS PrivateLink
+    - AWS Route 53
+    - AWS Site-to-Site VPN
+    - AWS Transit Gateway
+    - Amazon VPC
+- Security, Identity, and Compliance
+    - AWS Artifact
+    - AWS Audit Manager
+    - AWS Certificate Manager (ACM)
+    - AWS CloudHSM
+    - Amazon Cognito
+    - Amazon Detective
+    - AWS Directory Service
+    - AWS Firewall Manager
+    - Amazon GuardDuty
+    - AWS IAM Identity Center
+    - AWS Identity and Access Management (IAM)
+    - Amazon Inspector
+    - AWS Key Management Service (AWS KMS)
+    - Amazon Macie
+    - AWS Network Firewall
+    - AWS Resource Access Manager (AWS RAM)
+    - AWS Secrets Manager
+    - AWS Security Hub
+    - AWS Shield
+    - AWS WAF
+- Serverless
+    - AWS AppSync
+    - AWS Fargate
+    - AWS Lambda
+- Storage
+    - AWS Backup
+    - Amazon Elastic Block Store (Amazon EBS)
+    - Amazon Elastic File System (Amazon EFS)
+    - Amazon FSx
+    - Amazon S3
+    - Amazon S3 Glacier
+    - AWS Storage Gateway
